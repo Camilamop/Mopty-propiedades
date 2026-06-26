@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Departamentos en alquiler temporal en San Miguel de Tucumán. Monoambientes equipados en el centro y Barrio Sur. Consultas por WhatsApp.">
+  <title>Departamentos temporales | Mopty Propiedades</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .page-hero {
+      background: var(--verde);
+      color: var(--white);
+      padding: 56px 5% 48px;
+    }
+    .page-hero a {
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+    .page-hero a:hover { opacity: 1; }
+    .page-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 3vw, 40px);
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .page-hero p {
+      font-size: 15px;
+      color: var(--gray-lt);
+      font-weight: 300;
+      max-width: 520px;
+    }
+
+    /* DEPTO CARD */
+    .deptos-section {
+      padding: 64px 5%;
+    }
+
+    .depto-card {
+      background: var(--white);
+      border: 1px solid var(--gray-lt);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 48px;
+    }
+
+    .depto-card-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    /* GALERÍA */
+    .galeria {
+      position: relative;
+      background: #111;
+      overflow: hidden;
+      min-height: 400px;
+    }
+
+    .galeria-slides {
+      display: flex;
+      height: 100%;
+      transition: transform 0.35s ease;
+    }
+
+    .galeria-slide {
+      min-width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .galeria-nav {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+    }
+
+    .galeria-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      cursor: pointer;
+      border: none;
+      padding: 0;
+      transition: background 0.2s;
+    }
+    .galeria-dot.active { background: var(--gold); }
+
+    .galeria-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.35);
+      border: none;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .galeria-btn:hover { background: rgba(0,0,0,0.6); }
+    .galeria-btn.prev { left: 12px; }
+    .galeria-btn.next { right: 12px; }
+
+    .galeria-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--verde);
+      color: white;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 2px;
+    }
+
+    /* INFO DEPTO */
+    .depto-info {
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .depto-tipo {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .depto-nombre {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+
+    .depto-direccion {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .depto-direccion svg {
+      width: 14px;
+      height: 14px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+    }
+
+    .depto-desc {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.75;
+      margin-bottom: 24px;
+    }
+
+    .depto-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--brown-txt);
+    }
+
+    .feature svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--verde);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .depto-precio-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+      border-top: 1px solid var(--gray-lt);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .depto-precio-label {
+      font-size: 12px;
+      color: var(--gray);
+      margin-bottom: 2px;
+    }
+
+    .depto-precio-valor {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--verde);
+    }
+
+    .depto-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* DISPONIBLES banner */
+    .disponible-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #166534;
+      background: #dcfce7;
+      border: 1px solid #bbf7d0;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .disponible-badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #16a34a;
+      border-radius: 50%;
+    }
+
+    /* PENDIENTE depto */
+    .pendiente-card {
+      background: var(--beige);
+      border: 1px dashed var(--gray-lt);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .pendiente-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 8px;
+    }
+    .pendiente-card p {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 20px;
+    }
+
+    /* INFO GENERAL */
+    .info-section {
+      background: var(--beige);
+      padding: 56px 5%;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+    .info-item {
+      background: var(--white);
+      border-radius: 8px;
+      padding: 20px;
+      border: 1px solid var(--gray-lt);
+    }
+    .info-item-icon {
+      width: 36px;
+      height: 36px;
+      background: rgba(13,59,56,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+    .info-item-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--verde);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .info-item h4 { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+    .info-item p { font-size: 13px; color: var(--gray); }
+
+    @media (max-width: 768px) {
+      .depto-card-inner { grid-template-columns: 1fr; }
+      .galeria, .galeria-slide { min-height: 260px; height: 260px; }
+      .depto-features { grid-template-columns: 1fr; }
+      .depto-info { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <circle cx="18" cy="18" r="18" fill="#C49A2A"/>
+      <path d="M9 20L18 12L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 18V26H24V18" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="18" y1="15" x2="18" y2="23" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="18" cy="22" r="2" fill="white"/>
+    </svg>
+    <div class="nav-logo-text">Mopty<span>Propiedades</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#propiedades">Propiedades</a></li>
+    <li><a href="/#servicios">Servicios</a></li>
+    <li><a href="/departamentos/" style="color: var(--gold);">Alquiler temporal</a></li>
+    <li><a href="/hotel/">Hotel Tafí</a></li>
+    <li><a href="/#nosotros">Nosotros</a></li>
+    <li><a href="/#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="page-hero">
+  <a href="/">← Volver al inicio</a>
+  <h1>Departamentos en alquiler temporal</h1>
+  <p>Monoambientes equipados en San Miguel de Tucumán. Ideales para estadías cortas, trabajo o descanso. Consultá disponibilidad por WhatsApp.</p>
+</section>
+
+<section class="deptos-section">
+
+  <!-- DEPTO 1: ENTRE RÍOS -->
+  <div class="depto-card" id="entrerrios">
+    <div class="depto-card-inner">
+
+      <div class="galeria" id="galeria-1">
+        <div class="galeria-slides" id="slides-1">
+          <img class="galeria-slide" src="img/entrerrios-4.jpg" alt="Dormitorio con cama doble y balcón">
+          <img class="galeria-slide" src="img/entrerrios-1.jpg" alt="Ambiente principal con mesa y TV">
+          <img class="galeria-slide" src="img/entrerrios-2.jpg" alt="Vista hacia la cocina">
+          <img class="galeria-slide" src="img/entrerrios-5.jpg" alt="Cocina equipada">
+          <img class="galeria-slide" src="img/entrerrios-3.jpg" alt="Vista desde el balcón">
+        </div>
+        <span class="galeria-tag">Disponible</span>
+        <button class="galeria-btn prev" onclick="mover('1', -1)">&#8249;</button>
+        <button class="galeria-btn next" onclick="mover('1', 1)">&#8250;</button>
+        <div class="galeria-nav" id="dots-1">
+          <button class="galeria-dot active" onclick="irA('1',0)"></button>
+          <button class="galeria-dot" onclick="irA('1',1)"></button>
+          <button class="galeria-dot" onclick="irA('1',2)"></button>
+          <button class="galeria-dot" onclick="irA('1',3)"></button>
+          <button class="galeria-dot" onclick="irA('1',4)"></button>
+        </div>
+      </div>
+
+      <div class="depto-info">
+        <div>
+          <div class="disponible-badge">Disponible</div>
+          <div class="depto-tipo">Monoambiente · Barrio Sur</div>
+          <h2 class="depto-nombre">Departamento Entre Ríos</h2>
+          <div class="depto-direccion">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Entre Ríos 750, Barrio Sur · San Miguel de Tucumán
+          </div>
+          <p class="depto-desc">Monoambiente amplio y luminoso con balcón y vista a la ciudad. Cuenta con cama doble y cama individual, ideal para hasta 3 personas. Todo lo necesario para una estadía cómoda: cocina equipada, aire acondicionado y TV.</p>
+          <div class="depto-features">
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M3 12L12 3L21 12V20H15V15H9V20H3V12Z"/></svg>
+              Monoambiente
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M17 20H7V7a5 5 0 0 1 10 0v13z"/><path d="M3 20h18"/></svg>
+              Hasta 3 personas
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              Cama doble + individual
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              Balcón con vista
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 4-7 13-7 13S5 13 5 9a7 7 0 0 1 7-7z"/></svg>
+              Aire acondicionado
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Smart TV
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M6 2h12l2 7H4L6 2z"/><path d="M4 9v13h16V9"/></svg>
+              Cocina equipada
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              Heladera · Pava eléctrica
+            </div>
+          </div>
+        </div>
+        <div class="depto-precio-row">
+          <div>
+            <div class="depto-precio-label">Precio</div>
+            <div class="depto-precio-valor">Consultar</div>
+          </div>
+          <div class="depto-actions">
+            <a href="https://wa.me/5493815394603?text=Hola%20Mopty%2C%20consulto%20por%20el%20departamento%20de%20Entre%20R%C3%ADos%20750" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:moptypropiedades@gmail.com?subject=Consulta%20Depto%20Entre%20R%C3%ADos" class="btn btn-verde">Email</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DEPTO 2: MAIPÚ -->
+  <div class="depto-card" id="maipu">
+    <div class="depto-card-inner" style="direction: rtl;">
+
+      <div class="galeria" id="galeria-2" style="direction: ltr;">
+        <div class="galeria-slides" id="slides-2">
+          <img class="galeria-slide" src="img/maipu-1.jpg" alt="Ambiente con balcón y cama doble">
+          <img class="galeria-slide" src="img/maipu-2.jpg" alt="Vista completa del monoambiente">
+          <img class="galeria-slide" src="img/maipu-3.jpg" alt="Cama doble con kitchenette">
+          <img class="galeria-slide" src="img/maipu-4.jpg" alt="Balcón cubierto con sillas">
+        </div>
+        <span class="galeria-tag">Disponible</span>
+        <button class="galeria-btn prev" onclick="mover('2', -1)">&#8249;</button>
+        <button class="galeria-btn next" onclick="mover('2', 1)">&#8250;</button>
+        <div class="galeria-nav" id="dots-2">
+          <button class="galeria-dot active" onclick="irA('2',0)"></button>
+          <button class="galeria-dot" onclick="irA('2',1)"></button>
+          <button class="galeria-dot" onclick="irA('2',2)"></button>
+          <button class="galeria-dot" onclick="irA('2',3)"></button>
+        </div>
+      </div>
+
+      <div class="depto-info" style="direction: ltr;">
+        <div>
+          <div class="disponible-badge">Disponible</div>
+          <div class="depto-tipo">Monoambiente · Centro</div>
+          <h2 class="depto-nombre">Departamento Maipú</h2>
+          <div class="depto-direccion">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Maipú 545, Centro · San Miguel de Tucumán
+          </div>
+          <p class="depto-desc">Monoambiente con carácter propio: piso de parquet, cabecera de madera tallada y balcón cubierto con sillas para tomar el aire. Ubicado en pleno centro, a pasos de todo. Ideal para 2 personas.</p>
+          <div class="depto-features">
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M3 12L12 3L21 12V20H15V15H9V20H3V12Z"/></svg>
+              Monoambiente
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/><path d="M1 21V19A4 4 0 0 1 5.66 15.1"/><circle cx="5" cy="9" r="2"/></svg>
+              Hasta 2 personas
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+              Cama doble
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+              Balcón cubierto
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              Smart TV
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M6 2h12l2 7H4L6 2z"/><path d="M4 9v13h16V9"/></svg>
+              Kitchenette equipada
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+              Horno eléctrico · Pava
+            </div>
+            <div class="feature">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm3.5 6L9 14.5M9 8.5h.01M15 15.5h.01"/></svg>
+              Piso de parquet
+            </div>
+          </div>
+        </div>
+        <div class="depto-precio-row">
+          <div>
+            <div class="depto-precio-label">Precio</div>
+            <div class="depto-precio-valor">Consultar</div>
+          </div>
+          <div class="depto-actions">
+            <a href="https://wa.me/5493815394603?text=Hola%20Mopty%2C%20consulto%20por%20el%20departamento%20de%20Maip%C3%BA%20545" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="mailto:moptypropiedades@gmail.com?subject=Consulta%20Depto%20Maip%C3%BA" class="btn btn-verde">Email</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+<!-- INFO GENERAL -->
+<section class="info-section">
+  <span class="eyebrow">Información útil</span>
+  <h2 style="font-family:'Playfair Display',serif; font-size:26px; font-weight:400;">¿Cómo funciona el alquiler temporal?</h2>
+  <div class="info-grid">
+    <div class="info-item">
+      <div class="info-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <h4>1. Consultá disponibilidad</h4>
+      <p>Escribinos por WhatsApp o email con las fechas que necesitás.</p>
+    </div>
+    <div class="info-item">
+      <div class="info-item-icon">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+      </div>
+      <h4>2. Confirmamos la reserva</h4>
+      <p>Te informamos el precio según la duración y coordinamos el ingreso.</p>
+    </div>
+    <div class="info-item">
+      <div class="info-item-icon">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+      </div>
+      <h4>Estadía mínima</h4>
+      <p>Mínimo 1 noche. Consultar tarifas semanales y mensuales.</p>
+    </div>
+    <div class="info-item">
+      <div class="info-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h4>Ingreso seguro</h4>
+      <p>Coordinamos el ingreso directamente con vos. Atención personalizada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="contact-cta">
+  <span class="eyebrow" style="color: var(--gold-lt);">Reservas</span>
+  <h2>¿Cuándo viajás?</h2>
+  <p>Escribinos y te confirmamos disponibilidad en menos de 24 horas.</p>
+  <div class="contact-btns">
+    <a href="https://wa.me/5493815394603?text=Hola%20Mopty%2C%20consulto%20por%20alquiler%20temporal" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="mailto:moptypropiedades@gmail.com" class="btn btn-outline">moptypropiedades@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <span>© 2025 Mopty Propiedades · Tucumán, Argentina</span>
+  <span>Gestión familiar de propiedades</span>
+  <div style="display:flex; gap:20px;">
+    <a href="/">Inicio</a>
+    <a href="../hotel/">Hotel Tafí</a>
+  </div>
+</footer>
+
+<script>
+const estado = {};
+
+function mover(id, dir) {
+  const slides = document.getElementById('slides-' + id);
+  const total = slides.children.length;
+  if (!estado[id]) estado[id] = 0;
+  estado[id] = (estado[id] + dir + total) % total;
+  actualizar(id);
+}
+
+function irA(id, idx) {
+  estado[id] = idx;
+  actualizar(id);
+}
+
+function actualizar(id) {
+  const slides = document.getElementById('slides-' + id);
+  const dots = document.querySelectorAll('#dots-' + id + ' .galeria-dot');
+  slides.style.transform = `translateX(-${estado[id] * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === estado[id]));
+}
+</script>
+
+</body>
+</html>
