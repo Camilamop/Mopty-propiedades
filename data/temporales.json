@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "tipo": "Departamento",
+    "barrio": "Barrio Sur",
+    "direccion": "Entre Ríos 750",
+    "ciudad": "San Miguel de Tucumán",
+    "actividad": "Alquiler temporal",
+    "descripcion": "Departamento equipado en Barrio Sur. Ideal para estadías cortas.",
+    "estado": "activa",
+    "fotos": []
+  },
+  {
+    "id": 2,
+    "tipo": "Departamento",
+    "barrio": "Centro",
+    "direccion": "Maipú 545",
+    "ciudad": "San Miguel de Tucumán",
+    "actividad": "Alquiler temporal",
+    "descripcion": "Departamento en el corazón del centro. A pasos de todo.",
+    "estado": "activa",
+    "fotos": []
+  }
+]
