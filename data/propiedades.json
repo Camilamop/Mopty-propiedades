@@ -1,36 +1,21 @@
 [
   {
-    "id": 2,
-    "tipo": "Terreno",
-    "barrio": "Plazoleta Mitre",
-    "direccion": "Italia 1342",
-    "ciudad": "San Miguel de Tucumán",
-    "actividad": ["Venta", "Alquiler anual"],
-    "precio": 260000,
-    "moneda": "USD",
-    "superficie": 612,
-    "descripcion": "Apto para consultorios o locales comerciales. Ubicación privilegiada.",
-    "estado": "activa",
-    "fotos": []
-  },
-  {
     "id": 4,
     "tipo": "Casa",
-    "barrio": "Sarmiento",
-    "direccion": "Junín 1032",
+    "barrio": "Zona Norte",
+    "direccion": "Junín 1000",
     "ciudad": "San Miguel de Tucumán",
     "actividad": ["Venta"],
-    "precio": 65000,
+    "precio": 62000,
     "moneda": "USD",
     "superficie": null,
-    "descripcion": "Ambientes amplios. Casa interna a patios.",
-    "estado": "activa",
+    "descripcion": "2 dormitorios. Habitación/oficina con entrada independiente. Ambientes amplios. Casa interna a patios.",
     "fotos": []
   },
   {
     "id": 7,
-    "tipo": "Lote",
-    "barrio": "Portezuelo",
+    "tipo": "Lotes",
+    "barrio": "Portezuelo 1",
     "direccion": "Portezuelo 1",
     "ciudad": "Tapia",
     "actividad": ["Venta"],
@@ -39,8 +24,7 @@
     "precioDetalle": "USD 25 el m²",
     "superficie": null,
     "superficieRango": "850 a 1300 m²",
-    "descripcion": "Lote en Tapia. Precio por m². Dimensiones de 850 a 1300 m².",
-    "estado": "activa",
+    "descripcion": "Lotes entre 850 a 1300 m².",
     "fotos": []
   },
   {
@@ -53,8 +37,7 @@
     "precio": 200000,
     "moneda": "USD",
     "superficie": 800,
-    "descripcion": "Opción de adquirir la totalidad de la propiedad de 1200 m².",
-    "estado": "activa",
+    "descripcion": "Propiedad de 1200 m². Ideal para emprendimiento comercial. Ubicación estratégica en el centro de Monteros.",
     "fotos": []
   },
   {
@@ -68,7 +51,6 @@
     "moneda": "USD",
     "superficie": null,
     "descripcion": "Departamento en el centro de San Miguel de Tucumán.",
-    "estado": "activa",
     "fotos": []
   },
   {
@@ -80,10 +62,9 @@
     "actividad": ["Venta"],
     "precio": 10000000,
     "moneda": "ARS",
-    "precioDetalle": "ARS 10.000.000 cada uno",
+    "precioDetalle": "10.000.000 cada lote",
     "superficie": null,
     "descripcion": "3 lotes en venta. Ubicación pasando el centro. Precio por unidad.",
-    "estado": "activa",
     "fotos": []
   },
   {
@@ -98,6 +79,19 @@
     "superficie": null,
     "descripcion": "Departamento en Barrio Sur.",
     "estado": "activa",
+    "fotos": []
+  },
+  {
+    "id": 2,
+    "tipo": "Terreno",
+    "barrio": "Plazoleta Mitre",
+    "direccion": "Italia 1342",
+    "ciudad": "San Miguel de Tucumán",
+    "actividad": ["Venta", "Alquiler anual"],
+    "precio": 260000,
+    "moneda": "USD",
+    "superficie": 612,
+    "descripcion": "En construcción. Apto para consultorios o locales comerciales.",
     "fotos": []
   }
 ]
