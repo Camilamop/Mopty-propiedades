@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hostería La Vidala — Tafí del Valle, Tucumán. Habitaciones para 2 a 6 personas, desayuno incluido, quincho con parrilla. Reservas por WhatsApp.">
-  <title>Hostería La Vidala | Tafí del Valle · Mopty Propiedades</title>
+  <title>Hostal La Vidala | Tafí del Valle </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -419,10 +419,10 @@
 <!-- BODY -->
 <section class="hotel-body">
   <div>
-    <span class="eyebrow">Sobre la hostería</span>
-    <h2>Un refugio serrano atendido por sus dueños</h2>
-    <p>La Vidala es una hostería familiar en Tafí del Valle, ubicada en un paraje tranquilo a 100 metros de la ruta, en zona residencial. A 2.000 metros sobre el nivel del mar, rodeada de cerros, arboledas y silencio serrano.</p>
-    <p>Desde la recepción hasta el desayuno, cada detalle está a cargo de la familia. El comedor panorámico, el jardín con quincho y la galería exterior hacen de La Vidala un lugar para quedarse más de una noche.</p>
+    <span class="eyebrow">Sobre el Hostal</span>
+    <h2>Un refugio en las montañas atendido por sus dueños</h2>
+    <p>La Vidala es un hostal familiar en Tafí del Valle, ubicado en un paraje tranquilo a 100 metros de la ruta, en zona residencial. A 2.000 metros sobre el nivel del mar, rodeada de cerros, arboledas y silencio.</p>
+    <p>Desde la recepción hasta el desayuno, cada detalle está a cargo de la familia. El comedor panorámico con vistas al dique, el jardín con quincho y la galería exterior hacen de La Vidala un lugar para quedarse más de una noche.</p>
 
     <!-- HABITACIONES -->
     <div class="habitaciones">
@@ -735,7 +735,7 @@ async function enviarReserva(e) {
   btn.textContent = 'Enviando...'; btn.disabled = true;
   const data = new FormData(form);
   try {
-    const res = await fetch('https://formspree.io/f/moptypropiedades', {
+    const res = await fetch('https://formspree.io/f/mjgqwnpj', {
       method: 'POST', body: data, headers: { Accept: 'application/json' }
     });
     if (res.ok) {
