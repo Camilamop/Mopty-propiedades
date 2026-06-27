@@ -10,7 +10,20 @@
     "moneda": "USD",
     "superficie": null,
     "descripcion": "2 dormitorios. Habitación/oficina con entrada independiente. Ambientes amplios. Casa interna a patios.",
-    "fotos": []
+    "fotos": [
+      "img/propiedades/Junin-1000/foto-1.jpg",
+      "img/propiedades/Junin-1000/foto-2.jpg",
+      "img/propiedades/Junin-1000/foto-3.jpg",
+      "img/propiedades/Junin-1000/foto-4.jpg",
+      "img/propiedades/Junin-1000/foto-5.jpg",
+      "img/propiedades/Junin-1000/foto-6.jpg",
+      "img/propiedades/Junin-1000/foto-7.jpg",
+      "img/propiedades/Junin-1000/foto-8.jpg",
+      "img/propiedades/Junin-1000/foto-9.jpg",
+      "img/propiedades/Junin-1000/foto-10.jpg",
+      "img/propiedades/Junin-1000/foto-11.jpg",
+      "img/propiedades/Junin-1000/foto-12.jpg"
+    ]
   },
   {
     "id": 7,
@@ -79,7 +92,20 @@
     "superficie": null,
     "descripcion": "Departamento en Barrio Sur.",
     "estado": "activa",
-    "fotos": []
+    "fotos": [
+               "img/propiedades/Las Heras-Bolívar/foto-1.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-2.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-3.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-4.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-5.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-6.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-7.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-8.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-9.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-10.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-11.jpg",
+      "img/propiedades/Las Heras-Bolívar/foto-12.jpg"
+    ]
   },
   {
     "id": 2,
@@ -92,6 +118,6 @@
     "moneda": "USD",
     "superficie": 612,
     "descripcion": "En construcción. Apto para consultorios o locales comerciales.",
-    "fotos": []
+    "fotos": ["img/propiedades/Italia-1300/foto-12.jpg"]
   }
 ]
