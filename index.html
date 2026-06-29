@@ -195,12 +195,20 @@ function renderizar(props) {
   const grid = document.getElementById('propiedades-grid');
   grid.innerHTML = props.map(p => `
 <div class="prop-card-img">
-        ${p.fotos && p.fotos.length > 0
-          ? `<img src="${p.fotos[0]}" alt="${p.tipo} en ${p.direccion}" style="width:100%;height:100%;object-fit:cover;display:block;">`
-          : `<svg viewBox="0 0 24 24"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>`
-        }
-        <span class="prop-tag">${p.actividad[0]}</span>
+  ${p.fotos && p.fotos.length > 0 ? `
+    <div class="prop-slides" id="ps-${p.id}">
+      ${p.fotos.map(f => `<img src="${f}" alt="${p.tipo} en ${p.direccion}" loading="lazy">`).join('')}
+    </div>
+    ${p.fotos.length > 1 ? `
+      <button class="prop-slide-btn prev" onclick="slideP(event,'${p.id}',-1)">&#8249;</button>
+      <button class="prop-slide-btn next" onclick="slideP(event,'${p.id}',1)">&#8250;</button>
+      <div class="prop-slide-dots" id="pd-${p.id}">
+        ${p.fotos.map((_,i) => `<button class="prop-slide-dot ${i===0?'active':''}" onclick="slideP(event,'${p.id}',0,${i})"></button>`).join('')}
       </div>
+    ` : ''}
+  ` : `<svg viewBox="0 0 24 24"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>`}
+  <span class="prop-tag">${p.actividad[0]}</span>
+</div>
       <div class="prop-card-body">
         <div class="prop-tipo">${p.tipo}</div>
         <div class="prop-direccion">${p.direccion}</div>
@@ -229,6 +237,18 @@ document.querySelectorAll('.filtro-btn').forEach(btn => {
 });
 
 cargarPropiedades();
+const _slideIdx = {};
+function slideP(e, id, dir, goTo) {
+  e.stopPropagation();
+  const slides = document.getElementById('ps-' + id);
+  const dots = document.querySelectorAll('#pd-' + id + ' .prop-slide-dot');
+  const total = slides.children.length;
+  if (!_slideIdx[id]) _slideIdx[id] = 0;
+  if (goTo !== undefined) _slideIdx[id] = goTo;
+  else _slideIdx[id] = (_slideIdx[id] + dir + total) % total;
+  slides.style.transform = `translateX(-${_slideIdx[id] * 100}%)`;
+  dots.forEach((d, i) => d.classList.toggle('active', i === _slideIdx[id]));
+}
 </script>
 </body>
 </html>
