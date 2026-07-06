@@ -61,7 +61,10 @@
     "moneda": "USD",
     "superficie": 800,
     "descripcion": "Propiedad de 1200 m². Ideal para emprendimiento comercial. Ubicación estratégica en el centro de Monteros.",
-    "fotos": []
+    "fotos": [
+      "img/propiedades/25-de-mayo-450/1.jpg",
+      "img/propiedades/25-de-mayo-450/2.jpg"
+    ]
   },
   {
     "id": 13,
@@ -75,19 +78,19 @@
     "superficie": null,
     "descripcion": "Departamento en el centro de San Miguel de Tucumán.",
     "fotos": [
-               "img/propiedades/Virgen-Merced-200/1.jpg",
-      "img/propiedades/Virgen-Merced-200/2.jpg",
-      "img/propiedades/Virgen-Merced-200/3.jpg",
-      "img/propiedades/Virgen-Merced-200/4.jpg",
-      "img/propiedades/Virgen-Merced-200/5.jpg",
-      "img/propiedades/Virgen-Merced-200/6.jpg",
-      "img/propiedades/Virgen-Merced-200/7.jpg",
-      "img/propiedades/Virgen-Merced-200/8.jpg",
-      "img/propiedades/Virgen-Merced-200/9.jpg",
-      "img/propiedades/Virgen-Merced-200/10.jpg",
-      "img/propiedades/Virgen-Merced-200/11.jpg",
-      "img/propiedades/Virgen-Merced-200/12.jpg",
-      "img/propiedades/Virgen-Merced-200/13.jpg"
+               "img/propiedades/Virgen-Merced-200/1.jpeg",
+      "img/propiedades/Virgen-Merced-200/2.jpeg",
+      "img/propiedades/Virgen-Merced-200/3.jpeg",
+      "img/propiedades/Virgen-Merced-200/4.jpeg",
+      "img/propiedades/Virgen-Merced-200/5.jpeg",
+      "img/propiedades/Virgen-Merced-200/6.jpeg",
+      "img/propiedades/Virgen-Merced-200/7.jpeg",
+      "img/propiedades/Virgen-Merced-200/8.jpeg",
+      "img/propiedades/Virgen-Merced-200/9.jpeg",
+      "img/propiedades/Virgen-Merced-200/10.jpeg",
+      "img/propiedades/Virgen-Merced-200/11.jpeg",
+      "img/propiedades/Virgen-Merced-200/12.jpeg",
+      "img/propiedades/Virgen-Merced-200/13.jpeg"
     ]
   },
   {
@@ -142,6 +145,9 @@
     "moneda": "USD",
     "superficie": 612,
     "descripcion": "En construcción. Apto para consultorios o locales comerciales.",
-    "fotos": ["img/propiedades/Italia-1300/foto-1.jpg"]
+    "fotos": [
+      "img/propiedades/Italia-1300/foto-1.jpg",
+  "img/propiedades/Italia-1300/foto-2.jpg"
+]
   }
 ]
