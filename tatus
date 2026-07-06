@@ -1,0 +1,41 @@
+[33mcommit 4122b3914ef539ddf64972e93a00f45db72ade2d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: camila mopty <camilamopty@gmail.com>
+Date:   Mon Jul 6 10:23:16 2026 -0300
+
+    junin
+
+ img/propiedades/Junin-1000/foto-1.jpg  | Bin [31m5976239[m -> [32m670688[m bytes
+ img/propiedades/Junin-1000/foto-10.jpg | Bin [31m1760461[m -> [32m395402[m bytes
+ img/propiedades/Junin-1000/foto-11.jpg | Bin [31m2281799[m -> [32m707693[m bytes
+ img/propiedades/Junin-1000/foto-12.jpg | Bin [31m0[m -> [32m117877[m bytes
+ img/propiedades/Junin-1000/foto-12.png | Bin [31m1144665[m -> [32m0[m bytes
+ img/propiedades/Junin-1000/foto-2.jpg  | Bin [31m2054230[m -> [32m315503[m bytes
+ img/propiedades/Junin-1000/foto-3.jpg  | Bin [31m2409170[m -> [32m144668[m bytes
+ img/propiedades/Junin-1000/foto-4.jpg  | Bin [31m0[m -> [32m298826[m bytes
+ img/propiedades/Junin-1000/foto-4.png  | Bin [31m1576842[m -> [32m0[m bytes
+ img/propiedades/Junin-1000/foto-5.jpg  | Bin [31m0[m -> [32m48894[m bytes
+ img/propiedades/Junin-1000/foto-5.png  | Bin [31m1335882[m -> [32m0[m bytes
+ img/propiedades/Junin-1000/foto-6.png  | Bin [31m1096461[m -> [32m0[m bytes
+ img/propiedades/Junin-1000/foto-7.jpg  | Bin [31m0[m -> [32m257174[m bytes
+ img/propiedades/Junin-1000/foto-7.png  | Bin [31m1367719[m -> [32m0[m bytes
+ img/propiedades/Junin-1000/foto-8.jpg  | Bin [31m0[m -> [32m221905[m bytes
+ img/propiedades/Junin-1000/foto-8.png  | Bin [31m1358752[m -> [32m0[m bytes
+ img/propiedades/Junin-1000/foto-9.jpg  | Bin [31m1812575[m -> [32m484012[m bytes
+ 17 files changed, 0 insertions(+), 0 deletions(-)
+
+[33mcommit 021ba2a993ea01350cb4642664bc9e8b090dbf98[m
+Author: camila mopty <camilamopty@gmail.com>
+Date:   Mon Jul 6 10:09:11 2026 -0300
+
+    fotos2
+
+ css/style.css            |  2 [32m+[m[31m-[m
+ departamentos/index.html | 12 [32m++++++[m[31m------[m
+ 2 files changed, 7 insertions(+), 7 deletions(-)
+
+[33mcommit 6ecb47ace3749a8c40ac78fcda3935aa24bf2014[m
+Merge: f4088fc b1a55a9
+Author: camila mopty <camilamopty@gmail.com>
+Date:   Mon Jul 6 09:59:45 2026 -0300
+
+    Merge branch 'main' of https://github.com/Camilamop/Mopty-propiedades
