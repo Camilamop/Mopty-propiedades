@@ -157,3 +157,4 @@ footer a { color: var(--gold); text-decoration: none; }
   transition: background 0.2s;
 }
 .prop-slide-dot.active { background: var(--gold); }
+.prop-slides { width: 100%; }
