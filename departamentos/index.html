@@ -71,12 +71,13 @@
       transition: transform 0.35s ease;
     }
 
-    .galeria-slide {
-      min-width: 100%;
-      height: 400px;
-      object-fit: cover;
-      display: block;
-    }
+.galeria-slide {
+  min-width: 100%;
+  height: 400px;
+  object-fit: contain;
+  background: #111;
+  display: block;
+}
 
     .galeria-nav {
       position: absolute;
@@ -318,7 +319,7 @@
 
     @media (max-width: 768px) {
       .depto-card-inner { grid-template-columns: 1fr; }
-      .galeria, .galeria-slide { min-height: 260px; height: 260px; }
+     .galeria, .galeria-slide { min-height: 260px; height: 260px; object-fit: contain; }
       .depto-features { grid-template-columns: 1fr; }
       .depto-info { padding: 24px 20px; }
     }
