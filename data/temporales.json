@@ -9,13 +9,13 @@
     "descripcion": "Departamento equipado en Barrio Sur. Ideal para estadías cortas.",
     "estado": "activa",
     "fotos": [
-      "img/entrerrios-1.jpeg",
-      "img/entrerrios-2.jpeg",
-      "img/entrerrios-3.jpeg",
-      "img/entrerrios-4.jpeg",
-      "img/entrerrios-5.jpeg",
-      "img/entrerrios-6.jpeg",
-      "img/entrerrios-7.jpeg"
+      "img/Entrerrios/entrerrios-1.jpeg",
+      "img/Entrerrios/entrerrios-2.jpeg",
+      "img/Entrerrios/entrerrios-3.jpeg",
+      "img/Entrerrios/entrerrios-4.jpeg",
+      "img/Entrerrios/entrerrios-5.jpeg",
+      "img/Entrerrios/entrerrios-6.jpeg",
+      "img/Entrerrios/entrerrios-7.jpeg"
     ]
   },
   {
@@ -28,12 +28,12 @@
     "descripcion": "Departamento en el corazón del centro. A pasos de todo.",
     "estado": "activa",
     "fotos": [
-      "img/maipu-1.jpeg",
-      "img/maipu-2.jpeg",
-      "img/maipu-3.jpeg",
-      "img/maipu-4.jpeg",
-      "img/maipu-5.jpeg",
-      "img/maipu-6.jpeg"
+      "img/Maipu/maipu-1.jpeg",
+      "img/Maipu/maipu-2.jpeg",
+      "img/Maipu/maipu-3.jpeg",
+      "img/Maipu/maipu-4.jpeg",
+      "img/Maipu/maipu-5.jpeg",
+      "img/Maipu/maipu-6.jpeg"
     ]
   }
 ]
