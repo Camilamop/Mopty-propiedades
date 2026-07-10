@@ -4,117 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Hostería La Vidala — Tafí del Valle, Tucumán. Habitaciones para 2 a 6 personas, desayuno incluido, quincho con parrilla. Reservas por WhatsApp.">
-  <title>Hostal La Vidala | Tafí del Valle </title>
+  <title>Hostal La Vidala | Tafí del Valle</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    /* HERO */
+    /* ── NAV OVERRIDE: logo del hotel ── */
+    .hotel-nav-logo {
+      display: flex; align-items: center; gap: 10px; text-decoration: none;
+    }
+    .hotel-nav-logo img {
+      height: 44px; width: 44px; object-fit: contain; border-radius: 50%;
+    }
+    .hotel-nav-logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px; color: var(--white); letter-spacing: 0.04em;
+    }
+    .hotel-nav-logo-text span {
+      display: block; font-family: 'Inter', sans-serif;
+      font-size: 10px; font-weight: 300; letter-spacing: 0.18em;
+      color: var(--gold); text-transform: uppercase;
+    }
+
+    /* ── HERO ── */
     .hotel-hero {
-      position: relative;
-      min-height: 560px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      overflow: hidden;
+      position: relative; min-height: 560px;
+      display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;
     }
     .hotel-hero-img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 40%;
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 40%;
     }
     .hotel-hero-overlay {
-      position: absolute;
-      inset: 0;
+      position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(10,25,15,0.92) 0%, rgba(10,25,15,0.35) 55%, rgba(10,25,15,0.15) 100%);
     }
     .hotel-hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 0 5% 52px;
-      color: white;
+      position: relative; z-index: 2; padding: 0 5% 52px; color: white;
     }
     .hotel-hero-content a.back {
-      color: var(--gold);
-      text-decoration: none;
-      font-size: 13px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 20px;
-      opacity: 0.8;
+      color: var(--gold); text-decoration: none; font-size: 13px;
+      display: inline-flex; align-items: center; gap: 6px; margin-bottom: 20px; opacity: 0.8;
     }
     .hotel-hero-content a.back:hover { opacity: 1; }
     .hotel-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(196,154,42,0.18);
-      border: 1px solid rgba(196,154,42,0.4);
-      color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      padding: 6px 14px;
-      border-radius: 2px;
-      margin-bottom: 16px;
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(196,154,42,0.18); border: 1px solid rgba(196,154,42,0.4);
+      color: var(--gold); font-size: 11px; letter-spacing: 0.18em;
+      text-transform: uppercase; padding: 6px 14px; border-radius: 2px; margin-bottom: 16px;
     }
     .hotel-hero-content h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(30px, 4.5vw, 56px);
-      font-weight: 400;
-      line-height: 1.1;
-      margin-bottom: 12px;
+      font-size: clamp(30px, 4.5vw, 56px); font-weight: 400; line-height: 1.1; margin-bottom: 12px;
     }
     .hotel-hero-content p {
-      font-size: 16px;
-      color: rgba(255,255,255,0.75);
-      font-weight: 300;
-      max-width: 520px;
-      margin-bottom: 28px;
-      line-height: 1.7;
+      font-size: 16px; color: rgba(255,255,255,0.75); font-weight: 300;
+      max-width: 520px; margin-bottom: 28px; line-height: 1.7;
     }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    /* GALERÍA MOSAICO */
+    /* ── GALERÍA MOSAICO ── */
     .galeria-mosaico {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      grid-template-rows: 220px 220px;
-      gap: 3px;
-      background: #111;
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 220px 220px; gap: 3px; background: #111;
     }
-    .gal-cell {
-      overflow: hidden;
-      cursor: pointer;
-      position: relative;
-      background: #1a2a1a;
-    }
+    .gal-cell { overflow: hidden; cursor: pointer; position: relative; background: #1a2a1a; }
     .gal-cell:first-child { grid-row: span 2; }
-    .gal-cell img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-      display: block;
-    }
+    .gal-cell img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; display: block; }
     .gal-cell:hover img { transform: scale(1.05); }
     .gal-cell-last {
-      background: rgba(13,59,56,0.92);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 6px;
-      cursor: pointer;
+      background: rgba(13,59,56,0.92); display: flex; align-items: center;
+      justify-content: center; flex-direction: column; gap: 6px; cursor: pointer;
     }
     .gal-cell-last span { color: var(--gold); font-size: 15px; font-weight: 500; }
     .gal-cell-last small { color: rgba(255,255,255,0.4); font-size: 11px; }
 
-    /* MODAL */
+    /* ── MODAL ── */
     .modal-overlay {
       display: none; position: fixed; inset: 0;
       background: rgba(0,0,0,0.96); z-index: 2000;
@@ -127,189 +93,219 @@
     .modal-btn {
       background: rgba(255,255,255,0.1); border: none; color: white;
       width: 44px; height: 44px; border-radius: 50%; font-size: 22px;
-      cursor: pointer; display: flex; align-items: center; justify-content: center;
-      transition: background 0.2s;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.2s;
     }
     .modal-btn:hover { background: rgba(255,255,255,0.22); }
     .modal-counter { font-size: 13px; color: rgba(255,255,255,0.45); min-width: 56px; text-align: center; }
     .modal-close {
       position: absolute; top: 18px; right: 22px;
-      background: none; border: none; color: white; font-size: 30px;
-      cursor: pointer; opacity: 0.6; line-height: 1;
+      background: none; border: none; color: white; font-size: 30px; cursor: pointer; opacity: 0.6; line-height: 1;
     }
     .modal-close:hover { opacity: 1; }
 
-    /* MAIN CONTENT */
+    /* ── BODY LAYOUT ── */
     .hotel-body {
-      padding: 64px 5%;
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 52px;
-      align-items: start;
+      padding: 64px 5%; display: grid;
+      grid-template-columns: 1fr 360px; gap: 52px; align-items: start;
     }
-
     .hotel-desc h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px; font-weight: 400; margin-bottom: 16px;
+      font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; margin-bottom: 16px;
     }
-    .hotel-desc p {
-      font-size: 15px; color: var(--gray); line-height: 1.85; margin-bottom: 14px;
+    .hotel-desc p { font-size: 15px; color: var(--gray); line-height: 1.85; margin-bottom: 14px; }
+
+    /* ── TAFÍ DEL VALLE ── */
+    .tafi-section { margin-top: 48px; }
+    .tafi-section h3 {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 10px;
+    }
+    .tafi-section p { font-size: 14px; color: var(--gray); line-height: 1.8; margin-bottom: 20px; }
+
+    .actividades-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px; margin-bottom: 28px;
+    }
+    .actividad-item {
+      background: var(--beige); border-radius: 8px; padding: 14px 16px;
+      display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--brown-txt);
+    }
+    .actividad-item svg {
+      width: 16px; height: 16px; stroke: var(--verde); fill: none;
+      stroke-width: 1.8; stroke-linecap: round; flex-shrink: 0;
     }
 
-    /* HABITACIONES */
-    .habitaciones { margin-top: 40px; }
-    .habitaciones h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px; font-weight: 400; margin-bottom: 20px;
+    /* Carrusel automático Tafí */
+    .tafi-carrusel {
+      position: relative; border-radius: 12px; overflow: hidden;
+      height: 300px; background: #111; margin-top: 4px;
     }
-    .hab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .tafi-slides { display: flex; height: 100%; transition: transform 0.6s ease; }
+    .tafi-slide {
+      min-width: 100%; height: 300px; object-fit: cover; display: block; flex-shrink: 0;
+    }
+    .tafi-caption {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      color: white; font-size: 12px; padding: 24px 16px 12px;
+      letter-spacing: 0.06em;
+    }
+    .tafi-dots {
+      position: absolute; bottom: 10px; right: 14px;
+      display: flex; gap: 5px; z-index: 2;
+    }
+    .tafi-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(255,255,255,0.4); border: none; padding: 0; cursor: pointer; transition: background 0.2s;
+    }
+    .tafi-dot.active { background: var(--gold); }
+    .tafi-btn-left, .tafi-btn-right {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,0.3); border: none; color: white;
+      width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center; z-index: 2;
+    }
+    .tafi-btn-left { left: 8px; }
+    .tafi-btn-right { right: 8px; }
+
+    /* ── HABITACIONES ── */
+    .habitaciones { margin-top: 48px; }
+    .habitaciones h3 {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 20px;
+    }
+    .hab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
     .hab-card {
-      border: 1px solid var(--gray-lt); border-radius: 8px;
-      padding: 20px; background: var(--white);
-      transition: border-color 0.2s;
+      border: 1px solid var(--gray-lt); border-radius: 10px; overflow: hidden;
+      background: var(--white); transition: border-color 0.2s;
     }
     .hab-card:hover { border-color: var(--gold); }
-    .hab-tipo {
-      font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 6px;
+    .hab-fotos {
+      position: relative; height: 160px; background: var(--beige); overflow: hidden;
     }
-    .hab-nombre { font-weight: 500; font-size: 15px; margin-bottom: 6px; }
-    .hab-capacidad {
-      font-size: 13px; color: var(--gray);
-      display: flex; align-items: center; gap: 6px;
+    .hab-slides { display: flex; height: 100%; transition: transform 0.35s ease; }
+    .hab-slide { min-width: 100%; height: 160px; object-fit: cover; flex-shrink: 0; display: block; }
+    .hab-slide-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      background: rgba(0,0,0,0.35); border: none; color: white;
+      width: 26px; height: 26px; border-radius: 50%; cursor: pointer; font-size: 15px;
+      display: flex; align-items: center; justify-content: center; z-index: 2;
     }
-    .hab-capacidad svg {
-      width: 14px; height: 14px; stroke: var(--verde);
-      fill: none; stroke-width: 1.8; flex-shrink: 0;
+    .hab-slide-btn.prev { left: 6px; }
+    .hab-slide-btn.next { right: 6px; }
+    .hab-placeholder {
+      width: 100%; height: 160px; background: var(--beige);
+      display: flex; align-items: center; justify-content: center;
     }
-    .hab-features {
-      margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px;
-    }
-    .hab-tag {
-      font-size: 11px; background: var(--beige);
-      color: var(--brown-txt); padding: 3px 10px; border-radius: 100px;
-    }
+    .hab-placeholder svg { width: 36px; height: 36px; stroke: var(--gray-lt); fill: none; stroke-width: 1.2; }
 
-    /* AMENITIES */
+    .hab-body { padding: 16px; }
+    .hab-tipo { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin-bottom: 5px; }
+    .hab-nombre { font-weight: 500; font-size: 15px; margin-bottom: 6px; }
+    .hab-capacidad { font-size: 13px; color: var(--gray); display: flex; align-items: center; gap: 6px; margin-bottom: 10px; }
+    .hab-capacidad svg { width: 14px; height: 14px; stroke: var(--verde); fill: none; stroke-width: 1.8; flex-shrink: 0; }
+    .hab-features { display: flex; flex-wrap: wrap; gap: 5px; }
+    .hab-tag { font-size: 11px; background: var(--beige); color: var(--brown-txt); padding: 3px 10px; border-radius: 100px; }
+
+    /* ── AMENITIES ── */
     .amenities-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-      margin-top: 32px;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 32px;
     }
     .amenity-item {
-      display: flex; align-items: center; gap: 9px;
-      font-size: 13px; color: var(--brown-txt);
+      display: flex; align-items: center; gap: 9px; font-size: 13px; color: var(--brown-txt);
       background: var(--beige); padding: 10px 12px; border-radius: 6px;
     }
-    .amenity-item svg {
-      width: 15px; height: 15px; stroke: var(--verde);
-      fill: none; stroke-width: 1.8; stroke-linecap: round; flex-shrink: 0;
-    }
+    .amenity-item svg { width: 15px; height: 15px; stroke: var(--verde); fill: none; stroke-width: 1.8; stroke-linecap: round; flex-shrink: 0; }
 
-    /* RESERVA CARD */
-    .reserva-card {
-      background: var(--white); border: 1px solid var(--gray-lt);
-      border-radius: 12px; padding: 28px;
-      position: sticky; top: 84px;
+    /* ── PRECIOS DRIVE ── */
+    .precios-drive {
+      margin-top: 48px; background: var(--beige); border-radius: 12px;
+      padding: 28px; border: 1px solid var(--gray-lt);
     }
-    .reserva-card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px; font-weight: 400; margin-bottom: 6px;
+    .precios-drive h3 {
+      font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; margin-bottom: 8px;
     }
-    .reserva-card-sub {
-      font-size: 13px; color: var(--gray);
-      margin-bottom: 22px; padding-bottom: 20px;
-      border-bottom: 1px solid var(--gray-lt);
+    .precios-drive p { font-size: 14px; color: var(--gray); margin-bottom: 18px; line-height: 1.7; }
+    .precios-drive-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--verde); color: white; font-size: 13px; font-weight: 500;
+      padding: 11px 22px; border-radius: 4px; text-decoration: none; transition: background 0.2s;
     }
+    .precios-drive-btn:hover { background: var(--verde-lt); }
+    .precios-drive-btn svg { width: 15px; height: 15px; fill: white; flex-shrink: 0; }
 
-    /* CALENDARIO */
-    .cal-section { margin-bottom: 20px; }
-    .cal-label {
-      font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--gray); margin-bottom: 8px; display: block;
+    /* ── GASTRONOMÍA ── */
+    .gastro-section { margin-top: 48px; }
+    .gastro-section h3 {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 8px;
     }
-    .cal-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 10px;
+    .gastro-section p { font-size: 14px; color: var(--gray); margin-bottom: 20px; line-height: 1.7; }
+    .gastro-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .gastro-item {
+      border-radius: 8px; overflow: hidden; position: relative; height: 140px; background: var(--beige);
     }
-    .cal-mes {
-      font-size: 14px; font-weight: 500; color: var(--brown-txt);
+    .gastro-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gastro-item-label {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,0.72));
+      color: white; font-size: 11px; padding: 16px 10px 8px; letter-spacing: 0.06em;
     }
-    .cal-nav-btn {
-      background: none; border: 1px solid var(--gray-lt);
-      width: 28px; height: 28px; border-radius: 4px;
-      cursor: pointer; font-size: 14px; color: var(--gray);
-      display: flex; align-items: center; justify-content: center;
-      transition: border-color 0.2s, color 0.2s;
+    .gastro-placeholder {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 8px;
+      background: var(--beige); color: var(--gray);
     }
-    .cal-nav-btn:hover { border-color: var(--verde); color: var(--verde); }
-    .cal-grid {
-      display: grid; grid-template-columns: repeat(7, 1fr);
-      gap: 2px; text-align: center;
-    }
-    .cal-dow {
-      font-size: 10px; color: var(--gray); letter-spacing: 0.08em;
-      padding: 4px 0; text-transform: uppercase;
-    }
-    .cal-day {
-      font-size: 12px; padding: 6px 2px; border-radius: 4px;
-      cursor: pointer; transition: background 0.15s, color 0.15s;
-      user-select: none; line-height: 1;
-    }
-    .cal-day:hover:not(.vacio):not(.pasado) { background: var(--beige); }
-    .cal-day.vacio { visibility: hidden; }
-    .cal-day.pasado { color: var(--gray-lt); cursor: default; }
-    .cal-day.selected {
-      background: var(--verde); color: white; font-weight: 500;
-    }
-    .cal-day.in-range { background: rgba(13,59,56,0.1); }
-    .cal-day.checkin { background: var(--verde); color: white; border-radius: 4px 0 0 4px; }
-    .cal-day.checkout { background: var(--verde); color: white; border-radius: 0 4px 4px 0; }
-    .cal-selected-info {
-      font-size: 12px; color: var(--gray); margin-top: 8px;
-      min-height: 18px; text-align: center;
-    }
-    .cal-selected-info strong { color: var(--verde); }
+    .gastro-placeholder svg { width: 28px; height: 28px; stroke: var(--gray-lt); fill: none; stroke-width: 1.4; }
+    .gastro-placeholder span { font-size: 11px; text-align: center; padding: 0 8px; }
 
-    /* FORMULARIO */
-    .reserva-form { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 4px; }
-    .form-group label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); }
-    .form-group input, .form-group select, .form-group textarea {
-      font-family: 'Inter', sans-serif;
-      font-size: 13px; color: var(--brown-txt);
-      border: 1px solid var(--gray-lt); border-radius: 4px;
-      padding: 9px 12px; outline: none;
-      transition: border-color 0.2s; background: white;
+    /* ── GRUPOS & EVENTOS ── */
+    .grupos-eventos { margin-top: 48px; }
+    .grupos-eventos h3 {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 20px;
     }
-    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
-      border-color: var(--verde);
+    .ge-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .ge-card {
+      border: 1px solid var(--gray-lt); border-radius: 10px; padding: 22px;
+      background: var(--white); transition: border-color 0.2s;
     }
-    .form-group textarea { resize: vertical; min-height: 72px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .form-submit {
-      background: var(--gold); color: var(--verde);
-      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500;
-      border: none; border-radius: 4px; padding: 13px;
-      cursor: pointer; transition: background 0.2s; margin-top: 4px;
+    .ge-card:hover { border-color: var(--gold); }
+    .ge-icon {
+      width: 38px; height: 38px; background: rgba(13,59,56,0.08); border-radius: 8px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 14px;
     }
-    .form-submit:hover { background: var(--gold-lt); }
-    .form-success {
-      display: none; text-align: center;
-      background: #dcfce7; border: 1px solid #bbf7d0;
-      border-radius: 8px; padding: 20px; color: #166534;
-      font-size: 14px; line-height: 1.6;
+    .ge-icon svg { width: 18px; height: 18px; stroke: var(--verde); fill: none; stroke-width: 1.8; stroke-linecap: round; }
+    .ge-card h4 { font-size: 15px; font-weight: 500; margin-bottom: 6px; }
+    .ge-card p { font-size: 13px; color: var(--gray); line-height: 1.7; margin-bottom: 14px; }
+    .ge-card a {
+      font-size: 12px; font-weight: 500; color: var(--gold); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 4px;
     }
-    .form-success.show { display: block; }
-    .form-wa-alt {
-      text-align: center; margin-top: 12px;
-      font-size: 12px; color: var(--gray);
-    }
-    .form-wa-alt a { color: var(--verde); text-decoration: none; font-weight: 500; }
+    .ge-card a:hover { color: var(--verde); }
 
-    /* REDES */
-    .redes-row {
-      display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap;
+    /* ── RESEÑAS ── */
+    .resenas-section { margin-top: 48px; }
+    .resenas-section h3 {
+      font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 400; margin-bottom: 8px;
     }
+    .resenas-section p { font-size: 14px; color: var(--gray); margin-bottom: 20px; }
+    .resenas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .resena-card {
+      background: var(--beige); border-radius: 10px; padding: 20px;
+      border: 1px solid var(--gray-lt); position: relative;
+    }
+    .resena-estrellas { color: #F59E0B; font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
+    .resena-texto { font-size: 13px; color: var(--gray); line-height: 1.7; margin-bottom: 14px; font-style: italic; }
+    .resena-autor { font-size: 12px; font-weight: 500; color: var(--brown-txt); }
+    .resena-fecha { font-size: 11px; color: var(--gray); }
+    .resenas-cta {
+      margin-top: 16px; text-align: center;
+    }
+    .resenas-cta a {
+      font-size: 13px; color: var(--verde); font-weight: 500; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .resenas-cta a:hover { color: var(--gold); }
+
+    /* ── REDES ── */
+    .redes-row { display: flex; gap: 10px; margin-top: 16px; flex-wrap: wrap; }
     .red-btn {
       display: inline-flex; align-items: center; gap: 7px;
       font-size: 12px; font-weight: 500; padding: 8px 14px;
@@ -318,61 +314,145 @@
     .red-btn:hover { opacity: 0.85; }
     .red-ig { background: #E1306C; color: white; }
     .red-tt { background: #010101; color: white; }
+    .red-wa { background: #25D366; color: white; }
     .red-btn svg { width: 15px; height: 15px; fill: white; flex-shrink: 0; }
 
-    /* UBICACIÓN */
-    .ubicacion-section { background: var(--beige); padding: 64px 5%; }
-    .ubicacion-inner {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 40px; align-items: center;
+    /* ── RESERVA CARD ── */
+    .reserva-card {
+      background: var(--white); border: 1px solid var(--gray-lt);
+      border-radius: 12px; padding: 28px; position: sticky; top: 84px;
     }
-    .mapa-embed { border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-lt); height: 340px; }
-    .mapa-embed iframe { width: 100%; height: 100%; border: none; display: block; }
-    .ubicacion-info h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px; font-weight: 400; margin-bottom: 16px;
+    .reserva-card-title {
+      font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; margin-bottom: 6px;
     }
-    .ubicacion-dato {
-      display: flex; gap: 12px; align-items: flex-start;
-      margin-bottom: 14px; font-size: 14px; color: var(--gray);
+    .reserva-card-sub {
+      font-size: 13px; color: var(--gray); margin-bottom: 22px;
+      padding-bottom: 20px; border-bottom: 1px solid var(--gray-lt);
     }
-    .ubicacion-dato svg {
-      width: 16px; height: 16px; stroke: var(--gold);
-      fill: none; stroke-width: 1.8; stroke-linecap: round; flex-shrink: 0; margin-top: 2px;
+    .cal-section { margin-bottom: 20px; }
+    .cal-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray); margin-bottom: 8px; display: block; }
+    .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
+    .cal-mes { font-size: 14px; font-weight: 500; color: var(--brown-txt); }
+    .cal-nav-btn {
+      background: none; border: 1px solid var(--gray-lt); width: 28px; height: 28px; border-radius: 4px;
+      cursor: pointer; font-size: 14px; color: var(--gray);
+      display: flex; align-items: center; justify-content: center; transition: border-color 0.2s, color 0.2s;
+    }
+    .cal-nav-btn:hover { border-color: var(--verde); color: var(--verde); }
+    .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; }
+    .cal-dow { font-size: 10px; color: var(--gray); letter-spacing: 0.08em; padding: 4px 0; text-transform: uppercase; }
+    .cal-day {
+      font-size: 12px; padding: 6px 2px; border-radius: 4px;
+      cursor: pointer; transition: background 0.15s, color 0.15s; user-select: none; line-height: 1;
+    }
+    .cal-day:hover:not(.vacio):not(.pasado) { background: var(--beige); }
+    .cal-day.vacio { visibility: hidden; }
+    .cal-day.pasado { color: var(--gray-lt); cursor: default; }
+    .cal-day.selected { background: var(--verde); color: white; font-weight: 500; }
+    .cal-day.in-range { background: rgba(13,59,56,0.1); }
+    .cal-day.checkin { background: var(--verde); color: white; border-radius: 4px 0 0 4px; }
+    .cal-day.checkout { background: var(--verde); color: white; border-radius: 0 4px 4px 0; }
+    .cal-selected-info { font-size: 12px; color: var(--gray); margin-top: 8px; min-height: 18px; text-align: center; }
+    .cal-selected-info strong { color: var(--verde); }
+
+    .reserva-form { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 4px; }
+    .form-group label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); }
+    .form-group input, .form-group select, .form-group textarea {
+      font-family: 'Inter', sans-serif; font-size: 13px; color: var(--brown-txt);
+      border: 1px solid var(--gray-lt); border-radius: 4px; padding: 9px 12px;
+      outline: none; transition: border-color 0.2s; background: white;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--verde); }
+    .form-group textarea { resize: vertical; min-height: 72px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    /* Edades niños */
+    .ninos-section { margin-top: 6px; }
+    .ninos-toggle {
+      font-size: 12px; color: var(--verde); cursor: pointer; font-weight: 500;
+      background: none; border: none; padding: 4px 0; font-family: inherit; display: flex; align-items: center; gap: 6px;
+    }
+    .ninos-toggle svg { width: 14px; height: 14px; stroke: var(--verde); fill: none; stroke-width: 2; transition: transform 0.2s; }
+    .ninos-toggle.open svg { transform: rotate(180deg); }
+    .ninos-edades {
+      display: none; margin-top: 10px;
+      background: var(--beige); border-radius: 6px; padding: 14px; gap: 8px;
+      flex-direction: column;
+    }
+    .ninos-edades.open { display: flex; }
+    .ninos-edad-row { display: flex; align-items: center; gap: 10px; }
+    .ninos-edad-row label { font-size: 12px; color: var(--gray); min-width: 56px; }
+    .ninos-edad-row input {
+      width: 64px; font-family: 'Inter', sans-serif; font-size: 13px;
+      border: 1px solid var(--gray-lt); border-radius: 4px; padding: 6px 10px; background: white;
+    }
+    .btn-add-nino {
+      font-size: 12px; color: var(--verde); background: none; border: 1px dashed var(--gray-lt);
+      border-radius: 4px; padding: 6px 12px; cursor: pointer; font-family: inherit; margin-top: 4px;
+    }
+    .btn-add-nino:hover { border-color: var(--verde); }
+    .btn-rem-nino {
+      background: none; border: none; color: var(--gray); cursor: pointer; font-size: 16px; line-height: 1; padding: 0 4px;
     }
 
+    .form-submit {
+      background: var(--gold); color: var(--verde); font-family: 'Inter', sans-serif;
+      font-size: 14px; font-weight: 500; border: none; border-radius: 4px;
+      padding: 13px; cursor: pointer; transition: background 0.2s; margin-top: 4px;
+    }
+    .form-submit:hover { background: var(--gold-lt); }
+    .form-success {
+      display: none; text-align: center; background: #dcfce7;
+      border: 1px solid #bbf7d0; border-radius: 8px; padding: 20px;
+      color: #166534; font-size: 14px; line-height: 1.6;
+    }
+    .form-success.show { display: block; }
+    .form-wa-alt { text-align: center; margin-top: 12px; font-size: 12px; color: var(--gray); }
+    .form-wa-alt a { color: var(--verde); text-decoration: none; font-weight: 500; }
+
+    /* ── UBICACIÓN ── */
+    .ubicacion-section { background: var(--beige); padding: 64px 5%; }
+    .ubicacion-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .mapa-embed { border-radius: 12px; overflow: hidden; border: 1px solid var(--gray-lt); height: 340px; }
+    .mapa-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+    .ubicacion-info h3 { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 400; margin-bottom: 16px; }
+    .ubicacion-dato { display: flex; gap: 12px; align-items: flex-start; margin-bottom: 14px; font-size: 14px; color: var(--gray); }
+    .ubicacion-dato svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
       .galeria-mosaico { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
       .gal-cell:first-child { grid-row: span 1; }
       .hotel-body { grid-template-columns: 1fr; }
       .reserva-card { position: static; }
       .hab-grid { grid-template-columns: 1fr; }
+      .ge-grid { grid-template-columns: 1fr; }
+      .resenas-grid { grid-template-columns: 1fr; }
       .amenities-grid { grid-template-columns: 1fr 1fr; }
+      .gastro-grid { grid-template-columns: 1fr 1fr; }
       .ubicacion-inner { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
+      .tafi-carrusel { height: 220px; }
+      .tafi-slide { height: 220px; }
     }
   </style>
 </head>
 <body>
 
+<!-- NAV con logo del hotel -->
 <nav>
-  <a href="/" class="nav-logo">
-    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-      <circle cx="18" cy="18" r="18" fill="#C49A2A"/>
-      <path d="M9 20L18 12L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M12 18V26H24V18" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-      <line x1="18" y1="15" x2="18" y2="23" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
-      <circle cx="18" cy="22" r="2" fill="white"/>
-    </svg>
-    <div class="nav-logo-text">Mopty<span>Propiedades</span></div>
+  <a href="/" class="hotel-nav-logo">
+    <img src="img/logo.jpeg" alt="Logo La Vidala" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+    <div class="hotel-nav-logo-text">La Vidala<span>Tafí del Valle</span></div>
   </a>
   <ul class="nav-links">
-    <li><a href="/#propiedades">Propiedades</a></li>
-    <li><a href="/#servicios">Servicios</a></li>
-    <li><a href="/departamentos/">Alquiler temporal</a></li>
-    <li><a href="/hotel/" style="color: var(--gold);">Hotel Tafí</a></li>
-    <li><a href="/#nosotros">Nosotros</a></li>
-    <li><a href="/#contacto" class="nav-cta">Contacto</a></li>
+    <li><a href="#sobre">El hostal</a></li>
+    <li><a href="#habitaciones">Habitaciones</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#grupos">Grupos y eventos</a></li>
+    <li><a href="#ubicacion">Cómo llegar</a></li>
+    <li><a href="#reservar" class="nav-cta">Reservar</a></li>
   </ul>
 </nav>
 
@@ -381,7 +461,7 @@
   <img class="hotel-hero-img" src="img/hotel-hero.jpg" alt="Comedor de La Vidala con vista a los cerros de Tafí del Valle">
   <div class="hotel-hero-overlay"></div>
   <div class="hotel-hero-content">
-    <a href="/" class="back">← Volver al inicio</a>
+    <a href="/" class="back">← Volver a Mopty Propiedades</a>
     <div class="hotel-badge">Tafí del Valle · Tucumán</div>
     <h1>Hostal La Vidala</h1>
     <p>En el valle tucumano, atendido por sus dueños. Habitaciones para 2 a 6 personas, desayuno incluido y quincho con parrilla.</p>
@@ -392,7 +472,7 @@
   </div>
 </section>
 
-<!-- GALERÍA -->
+<!-- GALERÍA MOSAICO -->
 <div class="galeria-mosaico">
   <div class="gal-cell" onclick="abrirModal(0)"><img src="img/hotel-01.jpg" alt="Fachada La Vidala"></div>
   <div class="gal-cell" onclick="abrirModal(1)"><img src="img/hotel-02.jpg" alt="Galería exterior"></div>
@@ -416,51 +496,192 @@
   </div>
 </div>
 
-<!-- BODY -->
+<!-- CUERPO PRINCIPAL -->
 <section class="hotel-body">
   <div>
-    <span class="eyebrow">Sobre el Hostal</span>
-    <h2>Un refugio en las montañas atendido por sus dueños</h2>
-    <p>La Vidala es un hostal familiar en Tafí del Valle, ubicado en un paraje tranquilo a 100 metros de la ruta, en zona residencial. A 2.000 metros sobre el nivel del mar, rodeada de cerros, arboledas y silencio.</p>
-    <p>Desde la recepción hasta el desayuno, cada detalle está a cargo de la familia. El comedor panorámico con vistas al dique, el jardín con quincho y la galería exterior hacen de La Vidala un lugar para quedarse más de una noche.</p>
 
-    <!-- HABITACIONES -->
-    <div class="habitaciones">
-      <h3>Habitaciones</h3>
-      <div class="hab-grid">
-        <div class="hab-card">
-          <div class="hab-tipo">Habitación doble</div>
-          <div class="hab-nombre">Doble matrimonial</div>
-          <div class="hab-capacidad">
-            <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/></svg>
-            2 personas
-          </div>
-          <div class="hab-features">
-            <span class="hab-tag">Baño privado</span>
-            <span class="hab-tag">Calefacción</span>
-            <span class="hab-tag">TV</span>
-            <span class="hab-tag">Ropa de cama</span>
-          </div>
+    <!-- SOBRE EL HOSTAL -->
+    <div id="sobre">
+      <span class="eyebrow">Sobre el Hostal</span>
+      <h2>Un refugio en las montañas atendido por sus dueños</h2>
+      <p>La Vidala es un hostal familiar en Tafí del Valle, ubicado en un paraje tranquilo a 100 metros de la ruta, en zona residencial. A 2.000 metros sobre el nivel del mar, rodeada de cerros, arboledas y silencio.</p>
+      <p>Desde la recepción hasta el desayuno, cada detalle está a cargo de la familia. El comedor panorámico con vistas al dique, el jardín con quincho y la galería exterior hacen de La Vidala un lugar para quedarse más de una noche.</p>
+    </div>
+
+    <!-- TAFÍ DEL VALLE -->
+    <div class="tafi-section">
+      <span class="eyebrow">El destino</span>
+      <h3>Tafí del Valle: naturaleza y cultura en altura</h3>
+      <p>A 2.000 metros sobre el nivel del mar y a solo dos horas de San Miguel de Tucumán, Tafí del Valle es un refugio natural rodeado de cerros, arroyos y patrimonio prehispánico. Su clima fresco durante todo el año, sus paisajes abiertos y la tranquilidad del valle lo convierten en uno de los destinos más especiales del noroeste argentino.</p>
+
+      <div class="actividades-grid">
+        <div class="actividad-item">
+          <svg viewBox="0 0 24 24"><path d="M3 17l4-8 4 4 4-6 4 10"/><path d="M3 20h18"/></svg>
+          Trekking y senderismo
         </div>
-        <div class="hab-card">
-          <div class="hab-tipo">Habitación múltiple</div>
-          <div class="hab-nombre">Familiar / grupo</div>
-          <div class="hab-capacidad">
-            <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/><path d="M1 21V19A4 4 0 0 1 5.66 15.1"/><circle cx="5" cy="9" r="2"/></svg>
-            Hasta 6 personas
-          </div>
-          <div class="hab-features">
-            <span class="hab-tag">Baño privado</span>
-            <span class="hab-tag">Calefacción</span>
-            <span class="hab-tag">TV</span>
-            <span class="hab-tag">Camas individuales</span>
-          </div>
+        <div class="actividad-item">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Visita a menhires
+        </div>
+        <div class="actividad-item">
+          <svg viewBox="0 0 24 24"><path d="M2 20h20M4 20V10l8-6 8 6v10"/></svg>
+          Dique La Angostura
+        </div>
+        <div class="actividad-item">
+          <svg viewBox="0 0 24 24"><path d="M12 2a9 9 0 0 1 9 9c0 5-9 13-9 13S3 16 3 11a9 9 0 0 1 9-9z"/></svg>
+          Artesanías locales
+        </div>
+        <div class="actividad-item">
+          <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/></svg>
+          Cabalgatas
+        </div>
+        <div class="actividad-item">
+          <svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 0 0 1 1h3m10-11l2 2m-2-2v10a1 1 0 0 1-1 1h-3"/></svg>
+          Gastronomía regional
+        </div>
+      </div>
+
+      <!-- CARRUSEL AUTOMÁTICO -->
+      <div class="tafi-carrusel" id="tafi-carrusel">
+        <div class="tafi-slides" id="tafi-slides">
+          <!--
+            INSTRUCCIÓN: reemplazá los src por tus fotos reales del valle.
+            Carpeta sugerida: hotel/img/tafi/
+          -->
+          <img class="tafi-slide" src="img/tafi/tafi-1.jpg" alt="Paisaje Tafí del Valle" onerror="this.style.background='#1a3020'; this.style.height='300px';">
+          <img class="tafi-slide" src="img/tafi/tafi-2.jpg" alt="Dique La Angostura" onerror="this.style.background='#1a3020'; this.style.height='300px';">
+          <img class="tafi-slide" src="img/tafi/tafi-3.jpg" alt="Menhires" onerror="this.style.background='#1a3020'; this.style.height='300px';">
+          <img class="tafi-slide" src="img/tafi/tafi-4.jpg" alt="Cerros de Tafí" onerror="this.style.background='#1a3020'; this.style.height='300px';">
+          <img class="tafi-slide" src="img/tafi/tafi-5.jpg" alt="Valle de Tafí" onerror="this.style.background='#1a3020'; this.style.height='300px';">
+        </div>
+        <div class="tafi-caption" id="tafi-caption">Paisaje Tafí del Valle</div>
+        <button class="tafi-btn-left" onclick="moverTafi(-1)">&#8249;</button>
+        <button class="tafi-btn-right" onclick="moverTafi(1)">&#8250;</button>
+        <div class="tafi-dots" id="tafi-dots">
+          <button class="tafi-dot active" onclick="irATafi(0)"></button>
+          <button class="tafi-dot" onclick="irATafi(1)"></button>
+          <button class="tafi-dot" onclick="irATafi(2)"></button>
+          <button class="tafi-dot" onclick="irATafi(3)"></button>
+          <button class="tafi-dot" onclick="irATafi(4)"></button>
         </div>
       </div>
     </div>
 
+    <!-- HABITACIONES -->
+    <div class="habitaciones" id="habitaciones">
+      <h3>Habitaciones</h3>
+      <div class="hab-grid">
+
+        <!-- HAB DOBLE (2 personas) -->
+        <div class="hab-card">
+          <div class="hab-fotos" id="hf-1">
+            <!--
+              INSTRUCCIÓN: agregá tus fotos reales.
+              Carpeta sugerida: hotel/img/habitaciones/doble/
+              Si no tenés fotos aún, el placeholder se muestra solo.
+            -->
+            <div class="hab-placeholder">
+              <svg viewBox="0 0 24 24"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>
+            </div>
+            <!-- Cuando tengas fotos, reemplazá el placeholder por:
+            <div class="hab-slides" id="hs-1">
+              <img class="hab-slide" src="img/habitaciones/doble/1.jpg" alt="Habitación doble">
+              <img class="hab-slide" src="img/habitaciones/doble/2.jpg" alt="Habitación doble">
+            </div>
+            <button class="hab-slide-btn prev" onclick="slideHab(event,'1',-1)">&#8249;</button>
+            <button class="hab-slide-btn next" onclick="slideHab(event,'1',1)">&#8250;</button>
+            -->
+          </div>
+          <div class="hab-body">
+            <div class="hab-tipo">Habitación doble</div>
+            <div class="hab-nombre">Doble matrimonial</div>
+            <div class="hab-capacidad">
+              <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/></svg>
+              2 personas
+            </div>
+            <div class="hab-features">
+              <span class="hab-tag">Baño privado</span>
+              <span class="hab-tag">Calefacción</span>
+              <span class="hab-tag">TV</span>
+              <span class="hab-tag">Ropa de cama</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HAB TRIPLE (3 personas) -->
+        <div class="hab-card">
+          <div class="hab-fotos" id="hf-2">
+            <div class="hab-placeholder">
+              <svg viewBox="0 0 24 24"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>
+            </div>
+          </div>
+          <div class="hab-body">
+            <div class="hab-tipo">Habitación triple</div>
+            <div class="hab-nombre">Triple</div>
+            <div class="hab-capacidad">
+              <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/><path d="M1 21V19A4 4 0 0 1 5.66 15.1"/><circle cx="5" cy="9" r="2"/></svg>
+              3 personas
+            </div>
+            <div class="hab-features">
+              <span class="hab-tag">Baño privado</span>
+              <span class="hab-tag">Calefacción</span>
+              <span class="hab-tag">TV</span>
+              <span class="hab-tag">Camas individuales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HAB CUÁDRUPLE (4 personas) -->
+        <div class="hab-card">
+          <div class="hab-fotos" id="hf-3">
+            <div class="hab-placeholder">
+              <svg viewBox="0 0 24 24"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>
+            </div>
+          </div>
+          <div class="hab-body">
+            <div class="hab-tipo">Habitación cuádruple</div>
+            <div class="hab-nombre">Familiar</div>
+            <div class="hab-capacidad">
+              <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/><path d="M1 21V19A4 4 0 0 1 5.66 15.1"/><circle cx="5" cy="9" r="2"/></svg>
+              4 personas
+            </div>
+            <div class="hab-features">
+              <span class="hab-tag">Baño privado</span>
+              <span class="hab-tag">Calefacción</span>
+              <span class="hab-tag">TV</span>
+              <span class="hab-tag">2 dobles o 4 individuales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- HAB MÚLTIPLE (5 personas) -->
+        <div class="hab-card">
+          <div class="hab-fotos" id="hf-4">
+            <div class="hab-placeholder">
+              <svg viewBox="0 0 24 24"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>
+            </div>
+          </div>
+          <div class="hab-body">
+            <div class="hab-tipo">Habitación múltiple</div>
+            <div class="hab-nombre">Grupo / familia grande</div>
+            <div class="hab-capacidad">
+              <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/><path d="M1 21V19A4 4 0 0 1 5.66 15.1"/><circle cx="5" cy="9" r="2"/></svg>
+              Hasta 6 personas
+            </div>
+            <div class="hab-features">
+              <span class="hab-tag">Baño privado</span>
+              <span class="hab-tag">Calefacción</span>
+              <span class="hab-tag">TV</span>
+              <span class="hab-tag">Camas individuales</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /hab-grid -->
+    </div><!-- /habitaciones -->
+
     <!-- AMENITIES -->
-    <div class="amenities-grid">
+    <div class="amenities-grid" style="margin-top:32px;">
       <div class="amenity-item">
         <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
         Desayuno y merienda incluidos
@@ -487,8 +708,165 @@
       </div>
     </div>
 
-    <!-- REDES -->
-    <div style="margin-top:32px;">
+    <!-- PRECIOS (DRIVE) -->
+    <div class="precios-drive" id="precios">
+      <span class="eyebrow">Tarifas</span>
+      <h3>Precios y promociones</h3>
+      <p>Las tarifas varían según cantidad de personas, duración de la estadía y temporada. En el documento encontrás precios actualizados por habitación, paquetes especiales y promos vigentes.</p>
+      <!--
+        INSTRUCCIÓN: reemplazá el href con el link de tu archivo de Google Drive.
+        El archivo debe estar compartido como "Cualquier persona con el link puede ver".
+      -->
+      <a href="https://drive.google.com/TU-LINK-AQUI" class="precios-drive-btn" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L2 19.5h20L12 2z"/><path d="M2 19.5l10-7.5 10 7.5"/><path d="M12 12l-10 7.5"/></svg>
+        Ver tarifas actualizadas
+      </a>
+    </div>
+
+    <!-- GASTRONOMÍA -->
+    <div class="gastro-section">
+      <span class="eyebrow">Sabores del NOA</span>
+      <h3>Comidas regionales</h3>
+      <p>Desde el hostal ofrecemos platos de la cocina tucumana y del noroeste: empanadas tucumanas, locro, humita, tamales y asado en el quincho. Todo preparado con productos locales y cocinado con el mismo cuidado con que atendemos el hostal.</p>
+      <div class="gastro-grid">
+        <!--
+          INSTRUCCIÓN: reemplazá los src por fotos reales de tus comidas.
+          Carpeta sugerida: hotel/img/gastronomia/
+          Si no tenés fotos aún, el placeholder gris se muestra solo.
+        -->
+        <div class="gastro-item">
+          <div class="gastro-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+            <span>Empanadas tucumanas</span>
+          </div>
+        </div>
+        <div class="gastro-item">
+          <div class="gastro-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+            <span>Locro y humita</span>
+          </div>
+        </div>
+        <div class="gastro-item">
+          <div class="gastro-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+            <span>Asado en quincho</span>
+          </div>
+        </div>
+        <div class="gastro-item">
+          <div class="gastro-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+            <span>Tamales</span>
+          </div>
+        </div>
+        <div class="gastro-item">
+          <div class="gastro-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+            <span>Desayuno casero</span>
+          </div>
+        </div>
+        <div class="gastro-item">
+          <div class="gastro-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+            <span>Merienda regional</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- GRUPOS & EVENTOS -->
+    <div class="grupos-eventos" id="grupos">
+      <span class="eyebrow">Experiencias especiales</span>
+      <h3>Grupos y eventos</h3>
+      <div class="ge-grid">
+
+        <div class="ge-card">
+          <div class="ge-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/><path d="M1 21V19A4 4 0 0 1 5.66 15.1"/><circle cx="5" cy="9" r="2"/></svg>
+          </div>
+          <h4>Grupos</h4>
+          <p>Organizamos estadías para grupos con tarifas diferenciales. Quincho privado, asado incluido, habitaciones múltiples. Ideal para familias, amigos o equipos de trabajo que quieren el valle para ellos.</p>
+          <a href="https://wa.me/5493816145004?text=Hola%2C%20consulto%20por%20estadía%20grupal%20en%20La%20Vidala" target="_blank" rel="noopener">Consultar disponibilidad →</a>
+        </div>
+
+        <div class="ge-card">
+          <div class="ge-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 3l-4 4-4-4"/></svg>
+          </div>
+          <h4>Cumpleaños y celebraciones</h4>
+          <p>Festejá en el valle con la tranquilidad que merece la ocasión. Quincho privado, parrilla, decoración sencilla y la calidez de casa. Consultanos por paquetes especiales de cumple.</p>
+          <a href="https://wa.me/5493816145004?text=Hola%2C%20quiero%20consultar%20por%20un%20cumpleaños%20en%20La%20Vidala" target="_blank" rel="noopener">Consultar este evento →</a>
+        </div>
+
+        <div class="ge-card">
+          <div class="ge-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h4>Despedidas de soltero/a</h4>
+          <p>Un fin de semana en Tafí para celebrar el último capítulo antes del "sí". Actividades, gastronomía regional, quincho y naturaleza. Armamos el plan con vos.</p>
+          <a href="https://wa.me/5493816145004?text=Hola%2C%20quiero%20consultar%20por%20una%20despedida%20de%20soltero%20en%20La%20Vidala" target="_blank" rel="noopener">Armar el plan →</a>
+        </div>
+
+        <div class="ge-card">
+          <div class="ge-icon">
+            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h4>Talleres y retiros grupales</h4>
+          <p>El entorno natural de Tafí es ideal para retiros de yoga, meditación, talleres creativos o jornadas de team building. Consultanos por disponibilidad de espacio y condiciones especiales.</p>
+          <a href="https://wa.me/5493816145004?text=Hola%2C%20consulto%20por%20un%20taller%20o%20retiro%20grupal%20en%20La%20Vidala" target="_blank" rel="noopener">Consultar este evento →</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RESEÑAS -->
+    <div class="resenas-section">
+      <span class="eyebrow">Lo que dicen nuestros huéspedes</span>
+      <h3>Reseñas</h3>
+      <p>Reseñas reales de Google. Podés ver el perfil completo y dejar la tuya.</p>
+      <div class="resenas-grid">
+        <!--
+          INSTRUCCIÓN: reemplazá el contenido de cada .resena-card con reseñas reales de Google.
+          Copiá nombre, fecha, cantidad de estrellas y texto desde tu perfil de Google Business.
+        -->
+        <div class="resena-card">
+          <div class="resena-estrellas">★★★★★</div>
+          <p class="resena-texto">"Lugar increíble, muy tranquilo y con una vista hermosa al valle. La familia nos atendió de maravilla. Volvemos seguro."</p>
+          <div class="resena-autor">María G.</div>
+          <div class="resena-fecha">Google · 2024</div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-estrellas">★★★★★</div>
+          <p class="resena-texto">"El desayuno casero fue lo mejor. El quincho y la parrilla son un lujo. Muy recomendable para familias con chicos."</p>
+          <div class="resena-autor">Carlos R.</div>
+          <div class="resena-fecha">Google · 2024</div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-estrellas">★★★★★</div>
+          <p class="resena-texto">"Fuimos con un grupo de amigas y fue una experiencia inolvidable. La atención personalizada hace toda la diferencia."</p>
+          <div class="resena-autor">Luciana M.</div>
+          <div class="resena-fecha">Google · 2023</div>
+        </div>
+        <div class="resena-card">
+          <div class="resena-estrellas">★★★★☆</div>
+          <p class="resena-texto">"Muy buen lugar para desconectarse. Habitaciones cómodas, limpieza impecable y ubicación ideal para salir a caminar."</p>
+          <div class="resena-autor">Sebastián F.</div>
+          <div class="resena-fecha">Google · 2023</div>
+        </div>
+      </div>
+      <div class="resenas-cta">
+        <!--
+          INSTRUCCIÓN: reemplazá el href con el link a tu perfil de Google Business.
+          Lo encontrás en tu panel de Google Business → "Compartir perfil".
+        -->
+        <a href="https://g.page/r/TU-GOOGLE-BUSINESS-ID/review" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Ver todas las reseñas en Google
+        </a>
+      </div>
+    </div>
+
+    <!-- REDES SOCIALES -->
+    <div style="margin-top:36px;">
       <span class="eyebrow">Seguinos</span>
       <div class="redes-row">
         <a href="https://www.instagram.com/lavidalahostal" class="red-btn red-ig" target="_blank" rel="noopener">
@@ -499,14 +877,19 @@
           <svg viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.73a4.85 4.85 0 0 1-1.01-.04z"/></svg>
           @lavidalahostal
         </a>
+        <a href="https://wa.me/5493816145004?text=Hola%2C%20consulto%20por%20la%20hostería%20La%20Vidala" class="red-btn red-wa" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
       </div>
     </div>
-  </div>
+
+  </div><!-- /columna izquierda -->
 
   <!-- CARD RESERVA -->
   <div class="reserva-card" id="reservar">
     <div class="reserva-card-title">Pre-reservar estadía</div>
-    <div class="reserva-card-sub">Seleccioná las fechas y completá el formulario. Te confirmamos disponibilidad en menos de 24 hs.</div>
+    <div class="reserva-card-sub">Seleccioná las fechas y completá el formulario. Te confirmamos en menos de 24 hs.</div>
 
     <div class="cal-section">
       <span class="cal-label">Seleccioná fechas</span>
@@ -527,34 +910,51 @@
             <input type="text" name="nombre" required placeholder="Tu nombre">
           </div>
           <div class="form-group">
-            <label>Personas</label>
-            <select name="personas" required>
+            <label>Adultos</label>
+            <select name="adultos" required id="sel-adultos" onchange="actualizarNinos()">
               <option value="">—</option>
               <option>1</option><option>2</option><option>3</option>
               <option>4</option><option>5</option><option>6</option>
             </select>
           </div>
         </div>
+
+        <!-- NIÑOS -->
+        <div class="ninos-section">
+          <button type="button" class="ninos-toggle" id="ninos-toggle" onclick="toggleNinos()">
+            <svg viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+            ¿Viajan con niños?
+          </button>
+          <div class="ninos-edades" id="ninos-edades">
+            <div style="font-size:12px; color:var(--gray); margin-bottom:4px;">Indicá la edad de cada niño (en años)</div>
+            <div id="ninos-lista"></div>
+            <button type="button" class="btn-add-nino" onclick="agregarNino()">+ Agregar niño/a</button>
+            <input type="hidden" name="ninos" id="input-ninos">
+          </div>
+        </div>
+
         <div class="form-group">
           <label>WhatsApp o teléfono</label>
-          <input type="tel" name="telefono" required placeholder="+54 9 3816145004">
+          <input type="tel" name="telefono" required placeholder="+54 9 381...">
         </div>
         <div class="form-group">
           <label>Email</label>
-          <input type="email" name="email" required placeholder="vidalatafi@gmail.com">
+          <input type="email" name="email" required placeholder="tu@email.com">
         </div>
         <div class="form-group">
           <label>Tipo de habitación</label>
           <select name="habitacion" required>
             <option value="">Seleccionar</option>
             <option>Doble matrimonial (2 personas)</option>
-            <option>Habitación múltiple (hasta 6 personas)</option>
+            <option>Triple (3 personas)</option>
+            <option>Familiar (4 personas)</option>
+            <option>Múltiple (hasta 6 personas)</option>
             <option>A confirmar según disponibilidad</option>
           </select>
         </div>
         <div class="form-group">
           <label>Mensaje (opcional)</label>
-          <textarea name="mensaje" placeholder="¿Necesitás quincho, cena, algo especial?"></textarea>
+          <textarea name="mensaje" placeholder="¿Quincho, cena, evento especial?"></textarea>
         </div>
         <input type="hidden" name="fechas" id="input-fechas">
         <input type="hidden" name="_subject" value="Pre-reserva La Vidala — Tafí del Valle">
@@ -569,10 +969,11 @@
       </div>
 
       <div class="form-wa-alt">
-        O escribinos directo por <a href="https://wa.me/5493816145004?text=Hola%2C%20consulto%20por%20la%20hoster%C3%ADa%20La%20Vidala" target="_blank" rel="noopener">WhatsApp</a>
+        O escribinos directo por <a href="https://wa.me/5493816145004?text=Hola%2C%20consulto%20por%20la%20hostería%20La%20Vidala" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
   </div>
+
 </section>
 
 <!-- UBICACIÓN -->
@@ -590,7 +991,7 @@
       <h3>Hostería La Vidala</h3>
       <div class="ubicacion-dato">
         <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-        Zona residencial, pasaje Salomón Álvarez sin número altura ruta 307 km 55 · Tafí del Valle, Tucumán
+        Pasaje Salomón Álvarez s/n, altura Ruta 307 km 55 · Tafí del Valle, Tucumán
       </div>
       <div class="ubicacion-dato">
         <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h6l2 4v3h-8V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
@@ -615,16 +1016,16 @@
   <h2>¿Cuándo nos visitás?</h2>
   <p>Escribinos y confirmamos disponibilidad en menos de 24 horas.</p>
   <div class="contact-btns">
-    <a href="https://wa.me/5493816145004?text=Hola%2C%20consulto%20por%20la%20hoster%C3%ADa%20La%20Vidala" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="https://wa.me/5493816145004?text=Hola%2C%20consulto%20por%20la%20hostería%20La%20Vidala" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
     <a href="mailto:moptypropiedades@gmail.com?subject=Reserva%20La%20Vidala" class="btn btn-outline">moptypropiedades@gmail.com</a>
   </div>
 </section>
 
 <footer>
-  <span>© 2025 Mopty Propiedades · Tucumán, Argentina</span>
-  <span>Gestión familiar de propiedades</span>
+  <span>© 2025 La Vidala · Tafí del Valle, Tucumán</span>
+  <span>Hostería familiar</span>
   <div style="display:flex; gap:20px;">
-    <a href="/">Inicio</a>
+    <a href="/">Mopty Propiedades</a>
     <a href="../departamentos/">Departamentos</a>
   </div>
 </footer>
@@ -644,11 +1045,7 @@ const fotos = [
   { src: 'img/hotel-10.jpg', caption: 'Habitación múltiple' },
 ];
 let mIdx = 0;
-function abrirModal(i) {
-  mIdx = i;
-  document.getElementById('modal').classList.add('open');
-  actualizarModal();
-}
+function abrirModal(i) { mIdx = i; document.getElementById('modal').classList.add('open'); actualizarModal(); }
 function cerrarModal() { document.getElementById('modal').classList.remove('open'); }
 function cerrarFuera(e) { if (e.target.id === 'modal') cerrarModal(); }
 function navModal(d) { mIdx = (mIdx + d + fotos.length) % fotos.length; actualizarModal(); }
@@ -665,6 +1062,85 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') cerrarModal();
 });
 
+// ── CARRUSEL TAFÍ (automático) ─────────────────────────────
+const tafiCaptions = [
+  'Paisaje Tafí del Valle',
+  'Dique La Angostura',
+  'Menhires del Valle',
+  'Cerros de Tafí',
+  'El valle en invierno',
+];
+let tafiIdx = 0, tafiTimer = null;
+const TAFI_TOTAL = 5;
+
+function moverTafi(dir) {
+  tafiIdx = (tafiIdx + dir + TAFI_TOTAL) % TAFI_TOTAL;
+  actualizarTafi();
+  resetTafiTimer();
+}
+function irATafi(i) { tafiIdx = i; actualizarTafi(); resetTafiTimer(); }
+function actualizarTafi() {
+  document.getElementById('tafi-slides').style.transform = `translateX(-${tafiIdx * 100}%)`;
+  document.getElementById('tafi-caption').textContent = tafiCaptions[tafiIdx];
+  document.querySelectorAll('.tafi-dot').forEach((d,i) => d.classList.toggle('active', i === tafiIdx));
+}
+function resetTafiTimer() {
+  clearInterval(tafiTimer);
+  tafiTimer = setInterval(() => { tafiIdx = (tafiIdx + 1) % TAFI_TOTAL; actualizarTafi(); }, 4000);
+}
+resetTafiTimer();
+
+// ── CARRUSEL HABITACIONES ──────────────────────────────────
+const _habIdx = {};
+function slideHab(e, id, dir) {
+  e.stopPropagation();
+  const slides = document.getElementById('hs-' + id);
+  if (!slides) return;
+  const total = slides.children.length;
+  if (!_habIdx[id]) _habIdx[id] = 0;
+  _habIdx[id] = (_habIdx[id] + dir + total) % total;
+  slides.style.transform = `translateX(-${_habIdx[id] * 100}%)`;
+}
+
+// ── NIÑOS ──────────────────────────────────────────────────
+let ninosCount = 0;
+function toggleNinos() {
+  const toggle = document.getElementById('ninos-toggle');
+  const panel = document.getElementById('ninos-edades');
+  const open = panel.classList.toggle('open');
+  toggle.classList.toggle('open', open);
+  if (open && ninosCount === 0) agregarNino();
+}
+function agregarNino() {
+  ninosCount++;
+  const lista = document.getElementById('ninos-lista');
+  const row = document.createElement('div');
+  row.className = 'ninos-edad-row';
+  row.id = 'nino-row-' + ninosCount;
+  row.innerHTML = `
+    <label>Niño/a ${ninosCount}</label>
+    <input type="number" min="0" max="17" placeholder="Edad" id="nino-edad-${ninosCount}">
+    <button type="button" class="btn-rem-nino" onclick="quitarNino(${ninosCount})">×</button>
+  `;
+  lista.appendChild(row);
+  actualizarInputNinos();
+}
+function quitarNino(id) {
+  const row = document.getElementById('nino-row-' + id);
+  if (row) row.remove();
+  actualizarInputNinos();
+}
+function actualizarInputNinos() {
+  const edades = [];
+  document.querySelectorAll('[id^="nino-edad-"]').forEach(inp => {
+    if (inp.value !== '') edades.push(inp.value + ' años');
+  });
+  document.getElementById('input-ninos').value = edades.length > 0 ? edades.join(', ') : '';
+}
+document.addEventListener('change', e => {
+  if (e.target.id && e.target.id.startsWith('nino-edad-')) actualizarInputNinos();
+});
+
 // ── CALENDARIO ─────────────────────────────────────────────
 const MESES = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
 const DOW = ['Do','Lu','Ma','Mi','Ju','Vi','Sa'];
@@ -678,7 +1154,6 @@ function cambiarMes(d) {
   if (calMes < 0)  { calMes = 11; calAnio--; }
   renderCal();
 }
-
 function renderCal() {
   document.getElementById('cal-mes-label').textContent = MESES[calMes] + ' ' + calAnio;
   const grid = document.getElementById('cal-grid');
@@ -689,9 +1164,7 @@ function renderCal() {
   for (let i=0; i<primerDia; i++) { const el=document.createElement('div'); el.className='cal-day vacio'; grid.appendChild(el); }
   for (let d=1; d<=diasMes; d++) {
     const fecha = new Date(calAnio, calMes, d);
-    const el = document.createElement('div');
-    el.className = 'cal-day';
-    el.textContent = d;
+    const el = document.createElement('div'); el.className = 'cal-day'; el.textContent = d;
     if (fecha < hoy) { el.classList.add('pasado'); }
     else {
       const ts = fecha.getTime();
@@ -703,17 +1176,13 @@ function renderCal() {
     grid.appendChild(el);
   }
 }
-
 function seleccionarDia(fecha) {
   if (!checkin || (checkin && checkout)) { checkin = fecha; checkout = null; }
   else if (fecha > checkin) { checkout = fecha; }
   else { checkin = fecha; checkout = null; }
-  actualizarInfo();
-  renderCal();
+  actualizarInfo(); renderCal();
 }
-
 function fmt(d) { return d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear(); }
-
 function actualizarInfo() {
   const info = document.getElementById('cal-info');
   const input = document.getElementById('input-fechas');
@@ -723,15 +1192,15 @@ function actualizarInfo() {
   info.innerHTML = '<strong>'+fmt(checkin)+' → '+fmt(checkout)+'</strong> ('+noches+' noche'+(noches>1?'s':'')+')';
   input.value = fmt(checkin)+' al '+fmt(checkout)+' ('+noches+' noches)';
 }
-
 renderCal();
 
-// ── FORMULARIO → FORMSPREE ──────────────────────────────────
+// ── FORMULARIO FORMSPREE ───────────────────────────────────
 async function enviarReserva(e) {
   e.preventDefault();
   const form = document.getElementById('reserva-form');
   const btn = form.querySelector('.form-submit');
   if (!checkin) { alert('Seleccioná al menos la fecha de llegada.'); return; }
+  actualizarInputNinos();
   btn.textContent = 'Enviando...'; btn.disabled = true;
   const data = new FormData(form);
   try {
@@ -741,19 +1210,14 @@ async function enviarReserva(e) {
     if (res.ok) {
       form.style.display = 'none';
       document.getElementById('form-success').classList.add('show');
-    } else {
-      throw new Error();
-    }
+    } else { throw new Error(); }
   } catch {
-    // Fallback: abrir mailto con los datos
-    const nombre = data.get('nombre');
-    const personas = data.get('personas');
-    const tel = data.get('telefono');
-    const hab = data.get('habitacion');
-    const fechas = data.get('fechas');
-    const msg = data.get('mensaje');
+    const nombre = data.get('nombre'), adultos = data.get('adultos'), ninos = data.get('ninos');
+    const tel = data.get('telefono'), hab = data.get('habitacion');
+    const fechas = data.get('fechas'), msg = data.get('mensaje');
     const body = encodeURIComponent(
-      'Pre-reserva La Vidala\n\nNombre: '+nombre+'\nTeléfono: '+tel+'\nPersonas: '+personas+
+      'Pre-reserva La Vidala\n\nNombre: '+nombre+'\nTeléfono: '+tel+
+      '\nAdultos: '+adultos+(ninos ? '\nNiños (edades): '+ninos : '')+
       '\nHabitación: '+hab+'\nFechas: '+fechas+'\n\n'+msg
     );
     window.location.href = 'mailto:moptypropiedades@gmail.com?subject=Pre-reserva%20La%20Vidala&body='+body;
