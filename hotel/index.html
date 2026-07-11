@@ -465,7 +465,7 @@
     <a href="/" class="back">← Volver a Mopty Propiedades</a>
     <div class="hotel-badge">Tafí del Valle · Tucumán</div>
     <h1>Hostal La Vidala</h1>
-    <p>En el valle tucumano, atendido por sus dueños. Habitaciones para 2 a 6 personas, desayuno incluido y quincho con parrilla.</p>
+    <p>En el valle tucumano, atendido por sus dueños. Habitaciones para 2 a 6 personas, desayuno y merienda incluidos, estacionamiento propio y quincho con parrilla.</p>
     <div class="hero-actions">
       <a href="#reservar" class="btn btn-gold">Pre-reservar</a>
       <a href="#ubicacion" class="btn btn-outline">Cómo llegar</a>
@@ -505,7 +505,7 @@
     <div id="sobre">
       <span class="eyebrow">Sobre el Hostal</span>
       <h2>Un refugio en las montañas atendido por sus dueños</h2>
-      <p>La Vidala es un hostal familiar en Tafí del Valle, ubicado en un paraje tranquilo a 100 metros de la ruta, en zona residencial, rodeada de cerros, arboledas y silencio.</p>
+      <p>La Vidala es un hostal familiar en Tafí del Valle, ubicado en un paraje tranquilo a 100 metros de la ruta y a 15 min de la plaza principal, en zona residencial, rodeado de cerros, arboledas y silencio.</p>
       <p>Desde la recepción hasta el desayuno, cada detalle está a cargo de la familia. El comedor panorámico con vistas al dique, el jardín con quincho y la galería exterior hacen de La Vidala un lugar para quedarse más de una noche.</p>
     </div>
 
@@ -545,10 +545,6 @@
       <!-- CARRUSEL AUTOMÁTICO -->
       <div class="tafi-carrusel" id="tafi-carrusel">
         <div class="tafi-slides" id="tafi-slides">
-          <!--
-            INSTRUCCIÓN: reemplazá los src por tus fotos reales del valle.
-            Carpeta sugerida: hotel/img/tafi/
-          -->
           <img class="tafi-slide" src="img/tafi/tafi-1.jpg" alt="Paisaje Tafí del Valle" onerror="this.style.background='#1a3020'; this.style.height='300px';">
           <img class="tafi-slide" src="img/tafi/tafi-2.jpg" alt="Dique La Angostura" onerror="this.style.background='#1a3020'; this.style.height='300px';">
           <img class="tafi-slide" src="img/tafi/tafi-3.jpg" alt="Museos" onerror="this.style.background='#1a3020'; this.style.height='300px';">
@@ -735,40 +731,28 @@
           Si no tenés fotos aún, el placeholder gris se muestra solo.
         -->
         <div class="gastro-item">
-          <div class="gastro-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-            <span>Empanadas tucumanas</span>
-          </div>
+          <img src="img/gastronomia/empanadas.jpeg" alt="Empanadas tucumanas">
+          <div class="gastro-item-label">Empanadas tucumanas</div>
+        </div>
+       <div class="gastro-item">
+          <img src="img/gastronomia/asado.jpeg" alt="Asado">
+          <div class="gastro-item-label">Asado</div>
+       </div>
+        <div class="gastro-item">
+          <img src="img/gastronomia/humita.jpeg" alt="Humita">
+          <div class="gastro-item-label">Humita</div>
         </div>
         <div class="gastro-item">
-          <div class="gastro-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-            <span>Locro y humita</span>
-          </div>
+          <img src="img/gastronomia/pizza.jpeg" alt="Pizza">
+          <div class="gastro-item-label">Pizza</div>
         </div>
+       <div class="gastro-item">
+          <img src="img/gastronomia/desayuno.jpeg" alt="Desayuno">
+          <div class="gastro-item-label">Desayuno</div>
+       </div>
         <div class="gastro-item">
-          <div class="gastro-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
-            <span>Asado en quincho</span>
-          </div>
-        </div>
-        <div class="gastro-item">
-          <div class="gastro-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-            <span>Tamales</span>
-          </div>
-        </div>
-        <div class="gastro-item">
-          <div class="gastro-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-            <span>Desayuno casero</span>
-          </div>
-        </div>
-        <div class="gastro-item">
-          <div class="gastro-placeholder">
-            <svg viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
-            <span>Merienda regional</span>
-          </div>
+          <img src="img/gastronomia/postre.jpeg" alt="Postres caseros">
+          <div class="gastro-item-label">Postres caseros</div>
         </div>
       </div>
     </div>
@@ -1030,15 +1014,16 @@
 // ── GALERÍA MODAL ──────────────────────────────────────────
 const fotos = [
   { src: 'img/hotel-01.jpg', caption: 'Fachada — La Vidala' },
-  { src: 'img/hotel-02.jpg', caption: 'Galería exterior' },
-  { src: 'img/hotel-03.jpg', caption: 'Recepción' },
+  { src: 'img/hotel-02.jpg', caption: 'Recepción' },
+  { src: 'img/hotel-03.jpg', caption: 'Jardin' },
   { src: 'img/hotel-04.jpg', caption: 'Pasillo de habitaciones' },
-  { src: 'img/hotel-05.jpg', caption: 'Jardín y quincho' },
+  { src: 'img/hotel-05.jpg', caption: 'Habitacion' },
   { src: 'img/hotel-06.jpg', caption: 'Edificio y jardín' },
-  { src: 'img/hotel-07.jpg', caption: 'Comedor — vista al valle' },
+  { src: 'img/hotel-07.jpg', caption: 'Desayuno' },
   { src: 'img/hotel-08.jpg', caption: 'Comedor — atardecer' },
-  { src: 'img/hotel-09.jpg', caption: 'Habitación doble' },
-  { src: 'img/hotel-10.jpg', caption: 'Habitación múltiple' },
+  { src: 'img/hotel-09.jpg', caption: 'Entrada },
+  { src: 'img/hotel-10.jpg', caption: 'Rincon de niños' },
+  { src: 'img/hotel-11.jpg', caption: 'Comedor' },
 ];
 let mIdx = 0;
 function abrirModal(i) { mIdx = i; document.getElementById('modal').classList.add('open'); actualizarModal(); }
