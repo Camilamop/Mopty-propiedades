@@ -7,7 +7,7 @@
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/EEMRZk92z3S2qP6d9",
     "actividad": ["Venta"],
-    "precio": 65000,
+    "precio": 62000,
     "moneda": "USD",
     "superficie": null,
     "descripcion": "2 dormitorios. Habitación/oficina con entrada independiente. Ambientes amplios. Casa interna a patios.",
@@ -103,15 +103,14 @@
       "img/propiedades/Monteagudo 666/foto-6.jpg",
       "img/propiedades/Monteagudo 666/foto-7.jpg",
       "img/propiedades/Monteagudo 666/foto-8.jpg",
-      "img/propiedades/Monteagudo 666/foto-9.jpg",
-      "img/propiedades/Monteagudo 666/foto-10.jpg"
+      "img/propiedades/Monteagudo 666/foto-9.jpg"
     ]
   },
       {
     "id": 26,
     "tipo": "Departamento",
     "barrio": "Barrio Norte",
-    "direccion": "Monteagudo 300",
+    "direccion": "Balcarce 300",
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/K4KX7eewU1XwywC16",
     "actividad": ["Alquiler"],
