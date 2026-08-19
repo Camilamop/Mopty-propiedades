@@ -10,7 +10,7 @@
     "estado": "activa",
     "precio": 62000,
     "moneda": "USD",
-    "superficie": null,
+    "superficie": 126,
     "dormitorios": 2,
     "descripcion": "2 dormitorios. Habitación/oficina con entrada independiente. Ambientes amplios. Casa interna a patios.",
     "fotos": [
@@ -39,7 +39,7 @@
     "estado": "activa",
     "precio": 62000,
     "moneda": "USD",
-    "superficie": null,
+    "superficie": 59,
     "dormitorios": 2,
     "descripcion": "2 dormitorios. Balcón. Excelente calidad.",
     "fotos": [
@@ -68,7 +68,7 @@
     "estado": "activa",
     "precio": 62000,
     "moneda": "USD",
-    "superficie": 59,
+    "superficie": null,
     "dormitorios": 2,
     "banos": 1,
     "piso": 3,
@@ -101,7 +101,7 @@
     "estado": "activa",
     "precio": 750000,
     "moneda": "ARS",
-    "superficie": 59,
+    "superficie": null,
     "dormitorios": 2,
     "banos": 1,
     "piso": 4,
@@ -129,7 +129,7 @@
     "estado": "activa",
     "precio": 800000,
     "moneda": "ARS",
-    "superficie": 60,
+    "superficie": null,
     "dormitorios": 2,
     "banos": 2,
     "piso": 1,
@@ -162,7 +162,7 @@
     "estado": "activa",
     "precio": 45000,
     "moneda": "USD",
-    "superficie": null,
+    "superficie": 46,
     "dormitorios": 2,
     "banos": 1,
     "descripcion": "Departamento en planta baja en edificio pequeño, 2 dormitorios, 1 baño completo. Lavadero con patio.",
@@ -178,6 +178,27 @@
       "img/propiedades/Rondeau 1515/foto-9.jpeg",
       "img/propiedades/Rondeau 1515/foto-10.jpeg",
       "img/propiedades/Rondeau 1515/foto-11.jpeg"
+    ]
+  },
+    {
+    "id": 28,
+    "tipo": "Local Comercial",
+    "barrio": "Avda. Ejercito del Norte y Belgrano",
+    "direccion": "Santa Fe 2442",
+    "ciudad": "San Miguel de Tucumán",
+    "mapa": "https://maps.app.goo.gl/nZ9cpsYZoaLPK9EU8",
+    "actividad": ["Alquiler"],
+    "estado": "activa",
+    "precio": 600000,
+    "moneda": "ARS",
+    "superficie": 28,
+    "banos": 1,
+    "descripcion": "Local comercial vidriado con baño.",
+    "fotos": [
+      "img/propiedades/Santa Fe 2442/foto-1.jpeg",
+      "img/propiedades/Santa Fe 2442/foto-2.jpeg",
+      "img/propiedades/Santa Fe 2442/foto-3.jpeg",
+      "img/propiedades/Santa Fe 2442/foto-4.jpeg"
     ]
   },
   {
@@ -227,21 +248,66 @@
   {
     "id": 19,
     "tipo": "Lotes",
-    "barrio": "Centro",
+    "barrio": "La Florencia",
     "direccion": "Lotes en Monteros",
     "ciudad": "Monteros",
+    "mapa": "https://maps.app.goo.gl/goA9JqvzkLiXYS7F9",
     "actividad": ["Venta"],
     "estado": "activa",
-    "precio": 10000000,
+    "precio": 11500000,
     "moneda": "ARS",
-    "precioDetalle": "$ 10.000.000 cada lote",
-    "superficie": null,
-    "descripcion": "3 lotes en venta. Ubicación pasando el centro. Precio por unidad.",
-    "fotos": []
+    "precioDetalle": "$ 11.500.000 cada lote",
+    "superficie": 350,
+    "descripcion": "3 lotes contiguos en venta. 350 m2 cada uno. Precio por unidad.",
+    "fotos": [
+      "img/propiedades/Lotes en La Florencia/1.jpg",
+      "img/propiedades/Lotes en La Florencia/2.jpg"
+    ]
   },
+
+    {
+    "id": 29,
+    "tipo": "Propiedad a renovar",
+    "barrio": "Centro",
+    "direccion": "Colón 32",
+    "ciudad": "Monteros",
+    "mapa": "https://maps.app.goo.gl/cNts48NGeUBMmNsSA",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 270000,
+    "moneda": "USD",
+    "precioDetalle": "USD 270.000",
+    "superficie": null,
+    "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
+    "fotos": [
+      "img/propiedades/Colon 32/1.jpg",
+      "img/propiedades/Colon 32/2.jpg"
+    ]
+  },
+
+    {
+    "id": 30,
+    "tipo": "Propiedad a renovar",
+    "barrio": "Centro",
+    "direccion": "Colón 338",
+    "ciudad": "Monteros",
+    "mapa": "https://maps.app.goo.gl/oLb3YNKTx7TXeV1Z6",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 200000,
+    "moneda": "USD",
+    "precioDetalle": "USD 200.000",
+    "superficie": null,
+    "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
+    "fotos": [
+      "img/propiedades/Colon 338/1.jpg",
+      "img/propiedades/Colon 338/2.jpg"
+    ]
+  },
+
   {
     "id": 2,
-    "tipo": "Terreno",
+    "tipo": "Propiedad a renovar",
     "barrio": "Plazoleta Mitre",
     "direccion": "Italia 1300",
     "ciudad": "San Miguel de Tucumán",
