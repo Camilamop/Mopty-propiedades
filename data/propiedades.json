@@ -3,7 +3,7 @@
     "id": 4,
     "tipo": "Casa",
     "barrio": "Zona Norte",
-    "direccion": "Junín 1000",
+    "direccion": "Junín 1032",
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/EEMRZk92z3S2qP6d9",
     "actividad": ["Venta"],
@@ -32,7 +32,7 @@
     "id": 13,
     "tipo": "Departamento",
     "barrio": "Centro",
-    "direccion": "Virgen de la Merced 200",
+    "direccion": "Virgen de la Merced 274",
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/io3iAuPfU1iCWEQc8",
     "actividad": ["Venta"],
@@ -61,7 +61,7 @@
     "id": 22,
     "tipo": "Departamento",
     "barrio": "Barrio Sur",
-    "direccion": "Bolivar 300",
+    "direccion": "Bolivar 315",
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/y8Vf4TtShRqJW5ij8",
     "actividad": ["Venta"],
@@ -94,7 +94,7 @@
     "id": 24,
     "tipo": "Departamento",
     "barrio": "Barrio Norte",
-    "direccion": "Monteagudo 600",
+    "direccion": "Monteagudo 666",
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/XndYSCWx8aPXVVEL6",
     "actividad": ["Alquiler"],
@@ -122,7 +122,7 @@
     "id": 26,
     "tipo": "Departamento",
     "barrio": "Barrio Norte",
-    "direccion": "Balcarce 300",
+    "direccion": "Balcarce 369",
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/K4KX7eewU1XwywC16",
     "actividad": ["Alquiler"],
@@ -155,7 +155,7 @@
     "id": 28,
     "tipo": "Departamento",
     "barrio": "Ciudadela",
-    "direccion": "Rondeau 1500",
+    "direccion": "Rondeau 1515",
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/QRGZoyJyL3a2p32Q6",
     "actividad": ["Venta"],
@@ -302,6 +302,26 @@
     "fotos": [
       "img/propiedades/Colon 338/1.jpg",
       "img/propiedades/Colon 338/2.jpg"
+    ]
+  },
+
+      {
+    "id": 30,
+    "tipo": "Propiedad a renovar",
+    "barrio": "Centro",
+    "direccion": "Rivadavia 259",
+    "ciudad": "Monteros",
+    "mapa": "https://maps.app.goo.gl/XJNxAq6o1B6cVTbJ9",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 200000,
+    "moneda": "USD",
+    "precioDetalle": "USD 200.000",
+    "superficie": null,
+    "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
+    "fotos": [
+      "img/propiedades/Rivadavia 259/1.jpg",
+      "img/propiedades/Rivadavia 259/2.jpg"
     ]
   },
 
