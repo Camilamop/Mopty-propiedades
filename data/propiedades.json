@@ -167,17 +167,17 @@
     "banos": 1,
     "descripcion": "Departamento en planta baja en edificio pequeño, 2 dormitorios, 1 baño completo. Lavadero con patio.",
     "fotos": [
-      "img/propiedades/Rondeau 1515/foto-1.jpeg",
-      "img/propiedades/Rondeau 1515/foto-2.jpeg",
-      "img/propiedades/Rondeau 1515/foto-3.jpeg",
-      "img/propiedades/Rondeau 1515/foto-4.jpeg",
-      "img/propiedades/Rondeau 1515/foto-5.jpeg",
-      "img/propiedades/Rondeau 1515/foto-6.jpeg",
-      "img/propiedades/Rondeau 1515/foto-7.jpeg",
-      "img/propiedades/Rondeau 1515/foto-8.jpeg",
-      "img/propiedades/Rondeau 1515/foto-9.jpeg",
-      "img/propiedades/Rondeau 1515/foto-10.jpeg",
-      "img/propiedades/Rondeau 1515/foto-11.jpeg"
+      "img/propiedades/Rondeau 1515/foto-1.jpg",
+      "img/propiedades/Rondeau 1515/foto-2.jpg",
+      "img/propiedades/Rondeau 1515/foto-3.jpg",
+      "img/propiedades/Rondeau 1515/foto-4.jpg",
+      "img/propiedades/Rondeau 1515/foto-5.jpg",
+      "img/propiedades/Rondeau 1515/foto-6.jpg",
+      "img/propiedades/Rondeau 1515/foto-7.jpg",
+      "img/propiedades/Rondeau 1515/foto-8.jpg",
+      "img/propiedades/Rondeau 1515/foto-9.jpg",
+      "img/propiedades/Rondeau 1515/foto-10.jpg",
+      "img/propiedades/Rondeau 1515/foto-11.jpg"
     ]
   },
     {
@@ -224,7 +224,12 @@
       "img/propiedades/Portezuelo-1/5.jpg",
       "img/propiedades/Portezuelo-1/6.jpg",
       "img/propiedades/Portezuelo-1/7.jpg",
-      "img/propiedades/Portezuelo-1/8.jpg"
+      "img/propiedades/Portezuelo-1/8.jpg",
+      "img/propiedades/Portezuelo-1/9.jpg",
+      "img/propiedades/Portezuelo-1/10.jpg",
+      "img/propiedades/Portezuelo-1/11.jpg",
+      "img/propiedades/Portezuelo-1/12.jpg",
+      "img/propiedades/Portezuelo-1/13.jpg"
     ]
   },
   {
@@ -340,7 +345,8 @@
     "descripcion": "En construcción. Apto para consultorios o locales comerciales.",
     "fotos": [
       "img/propiedades/Italia-1300/foto-1.jpg",
-      "img/propiedades/Italia-1300/foto-2.jpg"
+      "img/propiedades/Italia-1300/foto-2.jpg",
+      "img/propiedades/Italia-1300/foto-3.jpg"
     ]
   }
 ]
