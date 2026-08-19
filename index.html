@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mopty Propiedades — Gestión, compraventa y alquileres en Tucumán. Departamentos, casas, terrenos y locales comerciales en San Miguel, Monteros y Tafí del Valle.">
+  <title>Mopty Propiedades | Tucumán</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <circle cx="18" cy="18" r="18" fill="#C49A2A"/>
+      <path d="M9 20L18 12L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 18V26H24V18" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="18" y1="15" x2="18" y2="23" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="18" cy="22" r="2" fill="white"/>
+    </svg>
+    <div class="nav-logo-text">Mopty<span>Propiedades</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#propiedades">Propiedades</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="departamentos/">Alquiler temporal</a></li>
+    <li><a href="https://lavidalatafi.com.ar" target="_blank" rel="noopener">Hotel Tafí</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <span class="eyebrow">Gestión de propiedades · Tucumán</span>
+    <h1>Encontrá tu próxima propiedad en Tucumán</h1>
+    <p class="hero-sub">Gestionamos la compra, venta y alquiler de propiedades con compromiso real. Una empresa familiar con años de trayectoria en San Miguel, Monteros y toda la provincia.</p>
+    <div class="hero-actions">
+      <a href="#propiedades" class="btn btn-gold">Ver propiedades</a>
+      <a href="#contacto" class="btn btn-outline">Consultanos</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-card">
+      <div class="stat-num">10</div>
+      <div class="stat-label">Propiedades activas</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">4</div>
+      <div class="stat-label">Localizaciones -San Miguel, Monteros, Tapia, Brasil-</div>
+    </div>
+    <div class="stat-card accent" style="grid-column: span 2;">
+      <div class="stat-num" style="font-size:18px; margin-bottom:4px;">Venta · Alquiler · Administración</div>
+      <div class="stat-label">Servicios integrales de gestión inmobiliaria</div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPIEDADES -->
+<section class="propiedades-section" id="propiedades">
+  <div class="section-header">
+    <span class="eyebrow">Cartera activa</span>
+    <h2>Propiedades disponibles</h2>
+  </div>
+
+  <!-- Los filtros se generan desde data/propiedades.json: nunca queda un filtro vacío -->
+  <div class="filtros" id="filtros"></div>
+
+  <div class="prop-count" id="prop-count"></div>
+
+  <div class="propiedades-grid" id="propiedades-grid"></div>
+</section>
+
+<!-- SERVICIOS -->
+<section class="servicios" id="servicios">
+  <span class="eyebrow">Lo que hacemos</span>
+  <h2 style="font-family:'Playfair Display',serif; font-size:28px; font-weight:400;">Gestión integral de propiedades</h2>
+  <div class="servicios-grid">
+    <div class="servicio-item">
+      <div class="servicio-icon">
+        <svg viewBox="0 0 24 24"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>
+      </div>
+      <h3>Compra y venta</h3>
+      <p>Acompañamos cada operación con respaldo profesional: administradores, arquitecta, contador y red notarial propia.</p>
+    </div>
+    <div class="servicio-item">
+      <div class="servicio-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L2 7L12 12L22 7L12 2Z"/><path d="M2 17L12 22L22 17"/><path d="M2 12L12 17L22 12"/></svg>
+      </div>
+      <h3>Alquileres temporales</h3>
+      <p>Gestión de alquileres de corta duración con atención personalizada y servicio integral.</p>
+    </div>
+    <div class="servicio-item">
+      <div class="servicio-icon">
+        <svg viewBox="0 0 24 24"><path d="M17 21V19A4 4 0 0 0 9 19V21"/><circle cx="13" cy="11" r="4"/><path d="M1 21V19A4 4 0 0 1 5.66 15.1"/><circle cx="5" cy="9" r="2"/></svg>
+      </div>
+      <h3>Asesoramiento</h3>
+      <p>Tasaciones, consultas legales y orientación para compradores, vendedores e inversores.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ALQUILERES TEMPORALES -->
+<section class="temporales-section" id="temporal">
+  <span class="eyebrow">Servicios adicionales</span>
+  <h2 style="font-family:'Playfair Display',serif; font-size:28px; font-weight:400; margin-bottom:8px;">Alquileres temporales y hospedaje</h2>
+  <p style="font-size:14px; color:#6B6560; max-width:520px;">Además de la gestión, ofrecemos departamentos equipados en San Miguel y nuestro hotel en Tafí del Valle.</p>
+  <div class="temp-cards">
+    <a href="departamentos/" class="temp-card">
+      <div class="temp-card-header">
+        <span>Alquiler temporal · San Miguel</span>
+      </div>
+      <div class="temp-card-body">
+        <h3>Departamentos en el centro</h3>
+        <p>Dos departamentos equipados disponibles en el corazón de San Miguel. Estadías cortas, trabajo o descanso.</p>
+        <span class="temp-link">Ver disponibilidad →</span>
+      </div>
+    </a>
+    <a href="https://lavidalatafi.com.ar" class="temp-card" target="_blank" rel="noopener">
+      <div class="temp-card-header tafi">
+        <span>Hotel · Tafí del Valle</span>
+      </div>
+      <div class="temp-card-body">
+        <h3>Hotel en Tafí del Valle</h3>
+        <p>Frente al Complejo Democracia, a 100 metros de la Ruta 307. Naturaleza, tranquilidad y hospitalidad tucumana</p>
+        <span class="temp-link">Ver habitaciones →</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- NOSOTROS -->
+<section class="about" id="nosotros">
+  <div>
+    <span class="eyebrow">Quiénes somos</span>
+    <h2>Una empresa familiar con raíces en Tucumán</h2>
+    <p>Mopty Propiedades nació del trabajo y la confianza que construimos generación a generación. Nuestro equipo incluye administradora, arquitecta, contador y vendedor, con una red de notarios y martilleros que acompaña cada operación.</p>
+    <p>No somos una agencia más. Somos la familia que se queda hasta que el trabajo está terminado.</p>
+  </div>
+  <div class="valores">
+    <div class="valor"><div class="valor-dot"></div><div class="valor-text"><strong>Compromiso hasta el final</strong><p>Acompañamos cada operación de principio a fin.</p></div></div>
+    <div class="valor"><div class="valor-dot"></div><div class="valor-text"><strong>Equipo profesional propio</strong><p>Vendedor, arquitecta, contador y administradora integrados.</p></div></div>
+    <div class="valor"><div class="valor-dot"></div><div class="valor-text"><strong>Trato personal y empático</strong><p>Atención directa, sin intermediarios innecesarios.</p></div></div>
+    <div class="valor"><div class="valor-dot"></div><div class="valor-text"><strong>Respaldo contable y legal</strong><p>Seguridad en cada operación que gestionamos.</p></div></div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact-cta" id="contacto">
+  <span class="eyebrow" style="color: var(--gold-lt);">Contacto</span>
+  <h2>¿Tenés una propiedad o buscás una?</h2>
+  <p>Hablemos. Atendemos consultas de propietarios, compradores e inquilinos en toda la provincia.</p>
+  <div class="contact-btns">
+    <a href="https://wa.me/5493815394603" class="btn btn-gold" target="_blank" rel="noopener">WhatsApp</a>
+    <a href="mailto:moptypropiedades@gmail.com" class="btn btn-outline">Enviar email</a>
+  </div>
+</section>
+
+<footer>
+  <span>© <span id="anio">2025</span> Mopty Propiedades · Tucumán, Argentina</span>
+  <span>Gestión familiar de propiedades</span>
+  <div style="display:flex; gap:20px;">
+    <a href="departamentos/">Alquiler temporal</a>
+    <a href="https://lavidalatafi.com.ar" target="_blank" rel="noopener">Hotel Tafí</a>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   MOPTY PROPIEDADES — cartera de propiedades
+   ========================================================= */
+
+const WHATSAPP = '5493815394603';
+
+const norm = v => (v == null ? '' : String(v)).trim().toLowerCase();
+const esc = v => (v == null ? '' : String(v))
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+/* ---------- Estado de la vista ---------- */
+const filtro = { operacion: null, tipo: null, zona: null };
+let PROPS = [];
+
+/* ---------- Carga ---------- */
+async function cargarPropiedades() {
+  const res = await fetch('data/propiedades.json');
+  const props = await res.json();
+  // Ocultas nunca se muestran. Las no disponibles y las sin fotos van al final.
+  PROPS = props
+    .filter(p => norm(p.estado) !== 'oculta')
+    .sort((a, b) => puntaje(b) - puntaje(a));
+  window._props = PROPS;
+  construirFiltros(PROPS);
+  aplicarFiltros();
+}
+
+function puntaje(p) {
+  let s = 0;
+  if (p.fotos && p.fotos.length) s += 2;
+  const e = norm(p.estado);
+  if (e === '' || e === 'activa') s += 1;
+  return s;
+}
+
+/* ---------- Filtros generados desde los datos ---------- */
+function unicos(lista) {
+  const vistos = new Map();
+  lista.forEach(v => {
+    if (v == null || String(v).trim() === '') return;
+    const k = norm(v);
+    if (!vistos.has(k)) vistos.set(k, String(v).trim());
+  });
+  return [...vistos.values()].sort((a, b) => a.localeCompare(b, 'es'));
+}
+
+function construirFiltros(props) {
+  const grupos = [
+    { dim: 'operacion', titulo: 'Operación', valores: unicos(props.flatMap(p => p.actividad || [])) },
+    { dim: 'tipo',      titulo: 'Tipo',      valores: unicos(props.map(p => p.tipo)) },
+    { dim: 'zona',      titulo: 'Zona',      valores: unicos(props.map(p => p.ciudad)) }
+  ];
+
+  const cont = document.getElementById('filtros');
+  cont.innerHTML = grupos.map(g => `
+    <div class="filtro-grupo">
+      <span class="filtro-label">${esc(g.titulo)}</span>
+      <div class="filtro-row">
+        ${g.valores.map(v => `
+          <button type="button" class="filtro-btn" data-dim="${g.dim}" data-valor="${esc(v)}" aria-pressed="false">${esc(v)}</button>
+        `).join('')}
+      </div>
+    </div>
+  `).join('') + `
+    <button type="button" class="filtro-reset" id="filtro-reset" hidden>Limpiar filtros</button>
+  `;
+
+  cont.querySelectorAll('.filtro-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const { dim, valor } = btn.dataset;
+      // Volver a tocar el mismo filtro lo desactiva
+      filtro[dim] = norm(filtro[dim]) === norm(valor) ? null : valor;
+      aplicarFiltros();
+    });
+  });
+  document.getElementById('filtro-reset').addEventListener('click', () => {
+    filtro.operacion = filtro.tipo = filtro.zona = null;
+    aplicarFiltros();
+  });
+}
+
+function aplicarFiltros() {
+  const filtradas = PROPS.filter(p => {
+    if (filtro.operacion && !(p.actividad || []).some(a => norm(a) === norm(filtro.operacion))) return false;
+    if (filtro.tipo && norm(p.tipo) !== norm(filtro.tipo)) return false;
+    if (filtro.zona && norm(p.ciudad) !== norm(filtro.zona)) return false;
+    return true;
+  });
+
+  document.querySelectorAll('.filtro-btn').forEach(b => {
+    const activo = norm(filtro[b.dataset.dim]) === norm(b.dataset.valor);
+    b.classList.toggle('active', activo);
+    b.setAttribute('aria-pressed', activo ? 'true' : 'false');
+  });
+  const hayFiltro = !!(filtro.operacion || filtro.tipo || filtro.zona);
+  document.getElementById('filtro-reset').hidden = !hayFiltro;
+
+  const n = filtradas.length;
+  document.getElementById('prop-count').textContent =
+    n === 0 ? 'Sin resultados' : (n === 1 ? '1 propiedad' : n + ' propiedades');
+
+  renderizar(filtradas);
+}
+
+/* ---------- Precio, superficie y características ---------- */
+function formatPrecio(p) {
+  if (p.precioDetalle) return esc(p.precioDetalle);
+  if (!p.precio) return 'Consultar precio';
+  // "/ mes" solo si la propiedad es únicamente alquiler (si también se vende, el precio es el de venta)
+  const acts = p.actividad || [];
+  const alquiler = acts.length > 0 && acts.every(a => norm(a).indexOf('alquiler') === 0);
+  const m = norm(p.moneda);
+  const simbolo = (m === 'usd' || m === 'u$s' || m === 'dolares') ? 'USD ' : '$ ';
+  return simbolo + p.precio.toLocaleString('es-AR') + (alquiler ? ' <span class="prop-periodo">/ mes</span>' : '');
+}
+
+function chips(p) {
+  const c = [];
+  if (p.dormitorios) c.push(p.dormitorios + (p.dormitorios === 1 ? ' dormitorio' : ' dormitorios'));
+  if (p.banos) c.push(p.banos + (p.banos === 1 ? ' baño' : ' baños'));
+  if (p.cochera) c.push('Cochera');
+  if (p.superficie) c.push(p.superficie + ' m²');
+  if (p.superficieRango) c.push(p.superficieRango);
+  if (p.piso) c.push('Piso ' + p.piso);
+  if (p.ascensor === true) c.push('Con ascensor');
+  if (p.ascensor === false) c.push('Sin ascensor');
+  if (p.amoblado) c.push('Amoblado');
+  if (p.expensas) c.push('Expensas $ ' + Number(p.expensas).toLocaleString('es-AR'));
+  if (!c.length) return '';
+  return `<div class="prop-chips">${c.map(x => `<span class="prop-chip">${esc(x)}</span>`).join('')}</div>`;
+}
+
+function destacados(p) {
+  const d = [];
+  if (p.aptoCredito) d.push('Apto crédito');
+  if (norm(p.estado) === 'reservada') d.push('Reservada');
+  if (norm(p.estado) === 'vendida') d.push('Vendida');
+  if (norm(p.estado) === 'alquilada') d.push('Alquilada');
+  return d;
+}
+
+function mensajeWA(p) {
+  const ref = [p.tipo, p.direccion, p.ciudad].filter(Boolean).join(' · ');
+  return 'https://wa.me/' + WHATSAPP + '?text=' +
+    encodeURIComponent('Hola Mopty, me interesa la propiedad: ' + ref + '. ¿Me pasan más información?');
+}
+
+/* ---------- Tarjetas ---------- */
+function renderizar(props) {
+  const grid = document.getElementById('propiedades-grid');
+
+  if (!props.length) {
+    grid.innerHTML = `
+      <div class="prop-empty">
+        <p>No hay propiedades con esta combinación de filtros.</p>
+        <div class="prop-empty-actions">
+          <button type="button" class="btn btn-verde" onclick="document.getElementById('filtro-reset').click()">Ver todas</button>
+          <a class="btn btn-outline-verde" href="${mensajeWA({ tipo: 'una propiedad', direccion: '', ciudad: '' })}" target="_blank" rel="noopener">Contanos qué buscás</a>
+        </div>
+      </div>`;
+    return;
+  }
+
+  grid.innerHTML = props.map(p => {
+    const fotos = p.fotos || [];
+    const tieneFotos = fotos.length > 0;
+    const estado = norm(p.estado);
+    const noDisponible = ['vendida', 'alquilada', 'reservada'].indexOf(estado) !== -1;
+
+    const galeria = tieneFotos ? `
+      <div class="prop-slides" id="ps-${p.id}" data-total="${fotos.length}">
+        ${fotos.map((f, i) => i === 0
+          ? `<img src="${esc(f)}" alt="${esc(p.tipo)} en ${esc(p.direccion)} — foto 1" width="800" height="600" fetchpriority="low">`
+          : `<img data-src="${esc(f)}" alt="${esc(p.tipo)} en ${esc(p.direccion)} — foto ${i + 1}" width="800" height="600" loading="lazy">`
+        ).join('')}
+      </div>
+      ${fotos.length > 1 ? `
+        <button type="button" class="prop-slide-btn prev" aria-label="Foto anterior" onclick="slideP(event,'${p.id}',-1)">&#8249;</button>
+        <button type="button" class="prop-slide-btn next" aria-label="Foto siguiente" onclick="slideP(event,'${p.id}',1)">&#8250;</button>
+        <div class="prop-slide-dots" id="pd-${p.id}">
+          ${fotos.map((_, i) => `<button type="button" class="prop-slide-dot ${i === 0 ? 'active' : ''}" aria-label="Ir a la foto ${i + 1}" onclick="slideP(event,'${p.id}',0,${i})"></button>`).join('')}
+        </div>
+        <span class="prop-fotos">${fotos.length} fotos</span>
+      ` : ''}
+    ` : `
+      <div class="prop-sin-foto">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>
+        <span>Fotos en preparación</span>
+      </div>`;
+
+    return `
+    <article class="prop-card${noDisponible ? ' no-disponible' : ''}">
+      <div class="prop-card-img">
+        ${galeria}
+        <span class="prop-tag">${esc((p.actividad || []).join(' · '))}</span>
+        ${noDisponible ? `<span class="prop-estado">${esc(destacados(p)[destacados(p).length - 1] || '')}</span>` : ''}
+      </div>
+      <div class="prop-card-body">
+        <div class="prop-tipo">${esc(p.tipo)}</div>
+        <h3 class="prop-direccion">${esc(p.direccion)}</h3>
+        <div class="prop-ciudad">${p.barrio ? esc(p.barrio) + ' · ' : ''}${esc(p.ciudad)}</div>
+        <div class="prop-precio">${formatPrecio(p)}</div>
+        ${p.aptoCredito ? `<span class="prop-credito">Apto crédito</span>` : ''}
+        ${chips(p)}
+        <p class="prop-desc">${esc(p.descripcion)}</p>
+        <div class="prop-actions">
+          <a class="prop-cta" href="${mensajeWA(p)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          ${p.mapa ? `<a class="prop-mapa" href="${esc(p.mapa)}" target="_blank" rel="noopener">Ver en el mapa</a>` : ''}
+        </div>
+      </div>
+    </article>`;
+  }).join('');
+
+  // Swipe táctil en cada galería
+  grid.querySelectorAll('.prop-slides').forEach(sl => {
+    const id = sl.id.replace('ps-', '');
+    let x0 = null;
+    sl.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+    sl.addEventListener('touchend', e => {
+      if (x0 === null) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 40) slideP(e, id, dx < 0 ? 1 : -1);
+      x0 = null;
+    });
+  });
+}
+
+/* ---------- Carrusel ---------- */
+const _slideIdx = {};
+
+function precargar(slides, i) {
+  [i, i + 1].forEach(k => {
+    const img = slides.children[k];
+    if (img && img.dataset.src) { img.src = img.dataset.src; delete img.dataset.src; }
+  });
+}
+
+function slideP(e, id, dir, goTo) {
+  if (e && e.stopPropagation) e.stopPropagation();
+  const slides = document.getElementById('ps-' + id);
+  if (!slides) return;
+  const dots = document.querySelectorAll('#pd-' + id + ' .prop-slide-dot');
+  const total = slides.children.length;
+  if (!_slideIdx[id]) _slideIdx[id] = 0;
+  if (goTo !== undefined) _slideIdx[id] = goTo;
+  else _slideIdx[id] = (_slideIdx[id] + dir + total) % total;
+  precargar(slides, _slideIdx[id]);
+  slides.style.transform = `translateX(-${_slideIdx[id] * 100}%)`;
+  dots.forEach((d, i) => {
+    d.classList.toggle('active', i === _slideIdx[id]);
+    d.setAttribute('aria-current', i === _slideIdx[id] ? 'true' : 'false');
+  });
+}
+
+document.getElementById('anio').textContent = new Date().getFullYear();
+cargarPropiedades();
+</script>
+</body>
+</html>
