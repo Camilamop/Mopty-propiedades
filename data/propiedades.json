@@ -195,10 +195,10 @@
     "banos": 1,
     "descripcion": "Local comercial vidriado con persiana con baño. 4 metros de frente por 9 m de profundidad",
     "fotos": [
-      "img/propiedades/Santa Fe 2442/foto-1.jpeg",
-      "img/propiedades/Santa Fe 2442/foto-2.jpeg",
-      "img/propiedades/Santa Fe 2442/foto-3.jpeg",
-      "img/propiedades/Santa Fe 2442/foto-4.jpeg"
+      "img/propiedades/Santa Fe 2442/1.jpg",
+      "img/propiedades/Santa Fe 2442/2.jpg",
+      "img/propiedades/Santa Fe 2442/3.jpg",
+      "img/propiedades/Santa Fe 2442/4.jpg"
     ]
   },
   {
@@ -232,7 +232,7 @@
   },
   {
     "id": 12,
-    "tipo": "Terreno",
+    "tipo": "Propiedad a renovar",
     "barrio": "Centro",
     "direccion": "25 de Mayo 450",
     "ciudad": "Monteros",
@@ -242,7 +242,7 @@
     "precio": 200000,
     "moneda": "USD",
     "superficie": 800,
-    "descripcion": "Propiedad de 1200 m². Ideal para emprendimiento comercial. Ubicación estratégica en el centro de Monteros.",
+    "descripcion": "Propiedad de 1200 m². Ideal para emprendimiento comercial grande o estacionamiento. Entrada por dos calles. Ubicación estratégica.",
     "fotos": [
       "img/propiedades/25-de-mayo-450/1.jpg",
       "img/propiedades/25-de-mayo-450/2.jpg"
@@ -265,6 +265,25 @@
     "fotos": [
       "img/propiedades/Lotes en La Florencia/1.jpg",
       "img/propiedades/Lotes en La Florencia/2.jpg"
+    ]
+  },
+
+  {
+    "id": 36,
+    "tipo": "Propiedad a renovar",
+    "barrio": "Centro",
+    "direccion": "Congreso 24",
+    "ciudad": "Monteros",
+    "mapa": "https://maps.app.goo.gl/Jy77g35n5Uyskza96",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 50000,
+    "moneda": "USD",
+    "precioDetalle": "USD 50.000",
+    "superficie": 141,
+    "descripcion": "Propiedad a renovar de 8x16 m² en la misma manzana de la Escuela Normal de Monteros.",
+    "fotos": [
+      "img/propiedades/Congreso-24/1.jpg"
     ]
   },
 
@@ -301,7 +320,7 @@
     "moneda": "USD",
     "precioDetalle": "USD 200.000",
     "superficie": null,
-    "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
+    "descripcion": "Terreno de importante valor comercial de grandes dimensiones. Ubicación estratégica en el centro de Monteros.",
     "fotos": [
       "img/propiedades/Colon 338/1.jpg",
       "img/propiedades/Colon 338/2.jpg"
@@ -321,7 +340,7 @@
     "moneda": "USD",
     "precioDetalle": null,
     "superficie": null,
-    "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
+    "descripcion": "Terreno de importante valor comercial. A 50 metros de la plaza principal de Monteros.",
     "fotos": [
       "img/propiedades/Rivadavia 259/1.jpg",
       "img/propiedades/Rivadavia 259/2.jpg"
