@@ -12,7 +12,8 @@
     "moneda": "USD",
     "superficie": 126,
     "dormitorios": 2,
-    "descripcion": "2 dormitorios. Habitación/oficina con entrada independiente. Ambientes amplios. Casa interna a patios.",
+    "aptoCredito": true,
+    "descripcion": "2 dormitorios. Habitación/oficina con entrada independiente. Ambientes amplios. Casa interna a patios. APTO CREDITO.",
     "fotos": [
       "img/propiedades/Junin-1000/foto-1.jpg",
       "img/propiedades/Junin-1000/foto-2.jpg",
@@ -74,7 +75,7 @@
     "piso": 3,
     "ascensor": false,
     "aptoCredito": true,
-    "descripcion": "Departamento de 2 dormitorios con placard. Cocina con lavadero y comedor amplio. Baño completo y balcón. Apto crédito. 3° piso por escaleras",
+    "descripcion": "Departamento de 2 dormitorios con placard. Cocina con lavadero y comedor amplio. Baño completo y balcón. Apto crédito. 3° piso por escaleras. APTO CRÉDITO.",
     "fotos": [
       "img/propiedades/Las Heras-Bolívar/foto-1.jpg",
       "img/propiedades/Las Heras-Bolívar/foto-2.jpg",
@@ -165,7 +166,8 @@
     "superficie": 46,
     "dormitorios": 2,
     "banos": 1,
-    "descripcion": "Departamento en planta baja en edificio pequeño, 2 dormitorios, 1 baño completo. Lavadero con patio.",
+    "aptoCredito": true,
+    "descripcion": "Departamento en planta baja en edificio pequeño, 2 dormitorios, 1 baño completo. Lavadero con patio.APTO CRÉDITO.",
     "fotos": [
       "img/propiedades/Rondeau 1515/foto-1.jpg",
       "img/propiedades/Rondeau 1515/foto-2.jpg",
@@ -178,6 +180,29 @@
       "img/propiedades/Rondeau 1515/foto-9.jpg",
       "img/propiedades/Rondeau 1515/foto-10.jpg",
       "img/propiedades/Rondeau 1515/foto-11.jpg"
+    ]
+  },
+  {
+    "id": 39,
+    "tipo": "Local Comercial",
+    "barrio": "Microcentro",
+    "direccion": "Mendoza 390",
+    "ciudad": "San Miguel de Tucumán",
+    "mapa": "https://maps.app.goo.gl/exotxPq1nCZjg6re6",
+    "actividad": ["Alquiler"],
+    "estado": "activa",
+    "precio": 1300000,
+    "moneda": "ARS",
+    "superficie": 45,
+    "banos": 1,
+    "descripcion": "Local comercial vidriado con rejas desmontables a 100 metros de la plaza Independencia. 4,5 metros de frente. Excelente ubicación.",
+    "fotos": [
+      "img/propiedades/Mendoza 390/1.jpg",
+      "img/propiedades/Mendoza 390/2.jpg",
+      "img/propiedades/Mendoza 390/3.jpg",
+      "img/propiedades/Mendoza 390/4.jpg",
+      "img/propiedades/Mendoza 390/5.jpg",
+      "img/propiedades/Mendoza 390/6.jpg"
     ]
   },
     {
@@ -215,7 +240,8 @@
     "precioDetalle": "USD 25 el m²",
     "superficie": null,
     "superficieRango": "850 a 1300 m²",
-    "descripcion": "Lotes entre 850 a 1300 m².",
+    "aptoCredito":true,
+    "descripcion": "Lotes entre 850 a 1300 m² en Tapia. A 5 minutos de la ruta 38. Ubicación estratégica. Ideal para vivienda campestre. Hermosas vistas. APTO CRÉDITO.",
     "fotos": [
       "img/propiedades/Portezuelo-1/1.jpg",
       "img/propiedades/Portezuelo-1/2.jpg",
@@ -228,6 +254,47 @@
       "img/propiedades/Portezuelo-1/9.jpg",
       "img/propiedades/Portezuelo-1/10.jpg",
       "img/propiedades/Portezuelo-1/11.jpg"
+    ]
+  },
+  {
+    "id": 42,
+    "tipo": "Terreno",
+    "barrio": "El Pelao",
+    "ciudad": "Tafí del Valle",
+    "mapa": "https://maps.app.goo.gl/5wf9GwqSzxsoDPAQ8",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 15000,
+    "moneda": "USD",
+    "superficie": 15000,
+    "descripcion": "Terreno de 1,5 hectáreas en Tafí del Valle. Hermosas vistas.",
+    "fotos": [
+      "img/propiedades/Lote en El Pelao/1.jpg",
+      "img/propiedades/Lote en El Pelao/2.jpg",
+      "img/propiedades/Lote en El Pelao/3.jpg",
+      "img/propiedades/Lote en El Pelao/4.jpg",
+      "img/propiedades/Lote en El Pelao/5.jpg"
+    ]
+  },
+  {
+    "id": 38,
+    "tipo": "Terreno",
+    "barrio": "La Ovejería",
+    "ciudad": "Tafí del Valle",
+    "mapa": "https://maps.app.goo.gl/sd1LhxwjdWucdx3JA",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 250000,
+    "moneda": "USD",
+    "superficie": 850,
+    "descripcion": "Terreno de 850 m² en Tafí del Valle. Zona tranquila y accesible. Ideal para segunda vivienda.",
+    "fotos": [
+      "img/propiedades/Lote La Ovejeria/1.jpg",
+      "img/propiedades/Lote La Ovejeria/2.jpg",
+      "img/propiedades/Lote La Ovejeria/3.jpg",
+      "img/propiedades/Lote La Ovejeria/4.jpg",
+      "img/propiedades/Lote La Ovejeria/5.jpg",
+      "img/propiedades/Lote La Ovejeria/6.jpg"
     ]
   },
   {
@@ -261,6 +328,7 @@
     "moneda": "ARS",
     "precioDetalle": "$ 11.500.000 cada lote",
     "superficie": 350,
+    "aptoCredito": true,
     "descripcion": "3 lotes contiguos en venta. 350 m2 cada uno. Precio por unidad.",
     "fotos": [
       "img/propiedades/Lotes en La Florencia/1.jpg",
