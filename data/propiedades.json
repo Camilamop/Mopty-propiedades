@@ -307,7 +307,7 @@
     "precio": 270000,
     "moneda": "USD",
     "precioDetalle": "USD 270.000",
-    "superficie": null,
+    "superficie": 627,
     "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
     "fotos": [
       "img/propiedades/Colon 32/1.jpg",
@@ -327,7 +327,7 @@
     "precio": 200000,
     "moneda": "USD",
     "precioDetalle": "USD 200.000",
-    "superficie": null,
+    "superficie": 650,
     "descripcion": "Terreno de importante valor comercial de grandes dimensiones. Ubicación estratégica en el centro de Monteros.",
     "fotos": [
       "img/propiedades/Colon 338/1.jpg",
@@ -394,7 +394,7 @@
     "estado": "activa",
     "precio": 70000,
     "moneda": "USD",
-    "superficie": null,
+    "superficie": 59,
     "dormitorios": 2,
     "banos": 1,
     "piso": 3,
