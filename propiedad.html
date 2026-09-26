@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" id="meta-desc" content="Ficha de propiedad — Mopty Propiedades, Tucumán.">
+
+  <!-- Vista previa al compartir (genérica; ver nota en el chat) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mopty Propiedades">
+  <meta property="og:title" id="og-title" content="Propiedad — Mopty Propiedades">
+  <meta property="og:description" id="og-desc" content="Gestión, compraventa y alquileres en Tucumán.">
+  <meta property="og:image" content="https://moptypropiedades.com/img/logo-og.jpg">
+
+  <title>Propiedad — Mopty Propiedades</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+  /* ---------- Ficha de propiedad (solo esta página) ---------- */
+  .ficha-wrap { max-width: 1100px; margin: 0 auto; padding: 32px 5% 80px; }
+
+  .ficha-volver { display: inline-flex; align-items: center; gap: 6px; color: var(--verde); text-decoration: none; font-size: 14px; margin-bottom: 22px; }
+  .ficha-volver:hover { color: var(--gold); }
+
+  /* Carrusel grande */
+  .ficha-galeria { position: relative; background: var(--beige); border-radius: 8px; overflow: hidden; }
+  .ficha-slides { display: flex; transition: transform 0.35s ease; }
+  .ficha-slides img {
+    min-width: 100%;
+    height: min(68vh, 620px);
+    object-fit: contain;      /* muestra completas horizontales y verticales */
+    background: var(--beige);
+    flex-shrink: 0;
+    cursor: zoom-in;
+  }
+  .ficha-slide-btn {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 46px; height: 46px; border: none; border-radius: 50%;
+    background: rgba(13,59,56,0.72); color: #fff; font-size: 26px; line-height: 1;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s;
+  }
+  .ficha-slide-btn:hover { background: var(--verde); }
+  .ficha-slide-btn.prev { left: 14px; }
+  .ficha-slide-btn.next { right: 14px; }
+  .ficha-dots { position: absolute; bottom: 14px; left: 0; right: 0; display: flex; gap: 7px; justify-content: center; }
+  .ficha-dot { width: 9px; height: 9px; border-radius: 50%; border: none; background: rgba(255,255,255,0.55); cursor: pointer; padding: 0; }
+  .ficha-dot.active { background: var(--gold); }
+  .ficha-contador { position: absolute; top: 14px; right: 16px; background: rgba(13,59,56,0.72); color: #fff; font-size: 12px; padding: 4px 10px; border-radius: 100px; }
+  .ficha-sin-foto { height: 360px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; color: var(--gray); }
+  .ficha-sin-foto svg { width: 54px; height: 54px; fill: var(--gray-lt); }
+
+  /* Encabezado de la ficha */
+  .ficha-head { margin: 28px 0 6px; }
+  .ficha-tag { display: inline-block; background: var(--verde); color: #fff; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border-radius: 100px; margin-bottom: 12px; }
+  .ficha-tipo { font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+  .ficha-dir { font-family: 'Playfair Display', serif; font-size: clamp(24px, 4vw, 36px); font-weight: 400; color: var(--verde); margin: 4px 0; }
+  .ficha-ciudad { color: var(--gray); font-size: 15px; }
+  .ficha-precio { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--brown-txt); margin: 16px 0 4px; }
+  .ficha-precio .ficha-periodo { font-family: 'Inter', sans-serif; font-size: 15px; color: var(--gray); }
+  .ficha-credito { display: inline-block; background: var(--beige); color: var(--verde); font-size: 12px; font-weight: 500; padding: 4px 12px; border-radius: 100px; margin-top: 6px; }
+
+  /* Grilla de características */
+  .ficha-carac { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin: 30px 0; padding: 26px 0; border-top: 1px solid var(--gray-lt); border-bottom: 1px solid var(--gray-lt); }
+  .ficha-item { display: flex; flex-direction: column; gap: 3px; }
+  .ficha-item .k { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
+  .ficha-item .v { font-size: 19px; color: var(--verde); font-weight: 500; }
+
+  .ficha-desc-titulo, .ficha-mapa-titulo { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--verde); margin: 30px 0 12px; font-weight: 400; }
+  .ficha-desc { color: var(--brown-txt); font-size: 16px; line-height: 1.75; white-space: pre-line; }
+
+  /* Mapa */
+  .ficha-mapa-box { border-radius: 8px; overflow: hidden; border: 1px solid var(--gray-lt); }
+  .ficha-mapa-box iframe { width: 100%; height: 340px; border: 0; display: block; }
+  .ficha-mapa-link { display: inline-block; margin-top: 10px; color: var(--verde); font-size: 14px; text-decoration: none; }
+  .ficha-mapa-link:hover { color: var(--gold); }
+
+  /* Acciones */
+  .ficha-acciones { display: flex; flex-wrap: wrap; gap: 12px; margin: 34px 0 0; }
+  .ficha-compartir { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 18px; padding-top: 18px; border-top: 1px dashed var(--gray-lt); }
+  .ficha-compartir span.lbl { font-size: 13px; color: var(--gray); margin-right: 4px; }
+  .btn-share { display: inline-flex; align-items: center; gap: 7px; background: var(--white); border: 1px solid var(--gray-lt); color: var(--verde); padding: 9px 16px; border-radius: 100px; font-size: 13.5px; cursor: pointer; font-family: inherit; text-decoration: none; transition: all 0.2s; }
+  .btn-share:hover { border-color: var(--verde); }
+  #copiado { font-size: 13px; color: var(--gold); opacity: 0; transition: opacity 0.2s; }
+  #copiado.show { opacity: 1; }
+
+  .ficha-error { text-align: center; padding: 80px 20px; }
+  .ficha-error h1 { font-family: 'Playfair Display', serif; color: var(--verde); font-weight: 400; margin-bottom: 12px; }
+
+  @media (max-width: 640px) {
+    .ficha-slides img { height: 52vh; }
+    .ficha-carac { grid-template-columns: repeat(2, 1fr); }
+  }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+      <circle cx="18" cy="18" r="18" fill="#C49A2A"/>
+      <path d="M9 20L18 12L27 20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M12 18V26H24V18" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="18" y1="15" x2="18" y2="23" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="18" cy="22" r="2" fill="white"/>
+    </svg>
+    <div class="nav-logo-text">Mopty<span>Propiedades</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#propiedades">Propiedades</a></li>
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="departamentos/">Alquiler temporal</a></li>
+    <li><a href="https://lavidalatafi.com.ar" target="_blank" rel="noopener">Hotel Tafí</a></li>
+    <li><a href="index.html#nosotros">Nosotros</a></li>
+    <li><a href="index.html#contacto" class="nav-cta">Contacto</a></li>
+  </ul>
+</nav>
+
+<main class="ficha-wrap" id="ficha">
+  <p style="color:var(--gray)">Cargando propiedad…</p>
+</main>
+
+<footer>
+  <span>© <span id="anio">2025</span> Mopty Propiedades · Tucumán, Argentina</span>
+  <span>Gestión familiar de propiedades</span>
+  <div style="display:flex; gap:20px;">
+    <a href="departamentos/">Alquiler temporal</a>
+    <a href="https://lavidalatafi.com.ar" target="_blank" rel="noopener">Hotel Tafí</a>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   MOPTY PROPIEDADES — Ficha individual de propiedad
+   Lee ?id=N de la URL y arma la vista desde propiedades.json
+   ========================================================= */
+
+const WHATSAPP = '5493815394603';
+const norm = v => (v == null ? '' : String(v)).trim().toLowerCase();
+const esc = v => (v == null ? '' : String(v))
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+/* ---- Precio (misma lógica que la home) ---- */
+function formatPrecio(p) {
+  if (p.precioDetalle) return esc(p.precioDetalle);
+  if (!p.precio) return 'Consultar precio';
+  const acts = p.actividad || [];
+  const alquiler = acts.length > 0 && acts.every(a => norm(a).indexOf('alquiler') === 0);
+  const m = norm(p.moneda);
+  const simbolo = (m === 'usd' || m === 'u$s' || m === 'dolares') ? 'USD ' : '$ ';
+  return simbolo + p.precio.toLocaleString('es-AR') + (alquiler ? ' <span class="ficha-periodo">/ mes</span>' : '');
+}
+
+function mensajeWA(p) {
+  const ref = [p.tipo, p.direccion, p.ciudad].filter(Boolean).join(' · ');
+  return 'https://wa.me/' + WHATSAPP + '?text=' +
+    encodeURIComponent('Hola Mopty, me interesa la propiedad: ' + ref + ' (' + location.href + '). ¿Me pasan más información?');
+}
+
+/* ---- Lista de características para la grilla ---- */
+function caracteristicas(p) {
+  const items = [];
+  items.push(['Operación', (p.actividad || []).join(' · ') || '—']);
+  items.push(['Tipo', p.tipo || '—']);
+  if (p.dormitorios != null) items.push(['Dormitorios', p.dormitorios]);
+  if (p.banos != null) items.push(['Baños', p.banos]);
+  if (p.superficie) items.push(['Superficie', p.superficie + ' m²']);
+  else if (p.superficieRango) items.push(['Superficie', p.superficieRango]);
+  if (p.piso != null) items.push(['Piso', p.piso]);
+  if (p.ascensor === true) items.push(['Ascensor', 'Sí']);
+  if (p.ascensor === false) items.push(['Ascensor', 'No']);
+  if (p.cochera) items.push(['Cochera', 'Sí']);
+  if (p.amoblado) items.push(['Amoblado', 'Sí']);
+  if (p.expensas) items.push(['Expensas', '$ ' + Number(p.expensas).toLocaleString('es-AR')]);
+  if (p.aptoCredito) items.push(['Crédito', 'Apto crédito']);
+  return items;
+}
+
+/* ---- Render principal ---- */
+async function cargar() {
+  const cont = document.getElementById('ficha');
+  const id = new URLSearchParams(location.search).get('id');
+
+  if (!id) { return mostrarError(cont, 'No se indicó ninguna propiedad.'); }
+
+  let props;
+  try {
+    const res = await fetch('data/propiedades.json');
+    props = await res.json();
+  } catch (e) {
+    return mostrarError(cont, 'No se pudieron cargar los datos.');
+  }
+
+  const p = props.find(x => String(x.id) === String(id));
+  if (!p) { return mostrarError(cont, 'No encontramos esta propiedad. Puede que ya no esté disponible.'); }
+
+  // Título y meta para pestaña y compartir
+  const titulo = [p.tipo, p.direccion].filter(Boolean).join(' — ') + ' | Mopty Propiedades';
+  document.title = titulo;
+  document.getElementById('og-title').setAttribute('content', titulo);
+  const resumen = (p.descripcion || '').slice(0, 150);
+  document.getElementById('og-desc').setAttribute('content', resumen);
+  document.getElementById('meta-desc').setAttribute('content', resumen);
+
+  const fotos = p.fotos || [];
+  const galeria = fotos.length ? `
+    <div class="ficha-galeria">
+      <div class="ficha-slides" id="fslides">
+        ${fotos.map((f, i) => `<img src="${esc(f)}" alt="${esc(p.tipo)} en ${esc(p.direccion)} — foto ${i + 1}" ${i > 0 ? 'loading="lazy"' : ''} onclick="window.open('${esc(f)}','_blank')">`).join('')}
+      </div>
+      ${fotos.length > 1 ? `
+        <button type="button" class="ficha-slide-btn prev" aria-label="Foto anterior" onclick="slide(-1)">&#8249;</button>
+        <button type="button" class="ficha-slide-btn next" aria-label="Foto siguiente" onclick="slide(1)">&#8250;</button>
+        <span class="ficha-contador"><span id="fnum">1</span> / ${fotos.length}</span>
+        <div class="ficha-dots" id="fdots">
+          ${fotos.map((_, i) => `<button type="button" class="ficha-dot ${i === 0 ? 'active' : ''}" aria-label="Foto ${i + 1}" onclick="slide(0,${i})"></button>`).join('')}
+        </div>
+      ` : ''}
+    </div>` : `
+    <div class="ficha-galeria"><div class="ficha-sin-foto">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9L12 3L21 9V21H15V15H9V21H3V9Z"/></svg>
+      <span>Fotos en preparación</span>
+    </div></div>`;
+
+  const carac = caracteristicas(p);
+  const mapaEmbed = (p.direccion || p.ciudad) ? `
+    <h2 class="ficha-mapa-titulo">Ubicación</h2>
+    <div class="ficha-mapa-box">
+      <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=${encodeURIComponent([p.direccion, p.ciudad].filter(Boolean).join(', '))}&z=15&output=embed"></iframe>
+    </div>
+    ${p.mapa ? `<a class="ficha-mapa-link" href="${esc(p.mapa)}" target="_blank" rel="noopener">📍 Abrir ubicación exacta en Google Maps</a>` : ''}
+  ` : (p.mapa ? `
+    <h2 class="ficha-mapa-titulo">Ubicación</h2>
+    <a class="ficha-mapa-link" href="${esc(p.mapa)}" target="_blank" rel="noopener">📍 Ver en Google Maps</a>` : '');
+
+  cont.innerHTML = `
+    <a class="ficha-volver" href="index.html#propiedades">&#8249; Volver a las propiedades</a>
+    ${galeria}
+    <div class="ficha-head">
+      <div class="ficha-tipo">${esc(p.tipo || '')}</div>
+      <h1 class="ficha-dir">${esc(p.direccion || 'Propiedad')}</h1>
+      <div class="ficha-ciudad">${p.barrio ? esc(p.barrio) + ' · ' : ''}${esc(p.ciudad || '')}</div>
+      <div class="ficha-precio">${formatPrecio(p)}</div>
+    </div>
+
+    <div class="ficha-carac">
+      ${carac.map(([k, v]) => `<div class="ficha-item"><span class="k">${esc(k)}</span><span class="v">${esc(v)}</span></div>`).join('')}
+    </div>
+
+    ${p.descripcion ? `<h2 class="ficha-desc-titulo">Descripción</h2><p class="ficha-desc">${esc(p.descripcion)}</p>` : ''}
+
+    ${mapaEmbed}
+
+    <div class="ficha-acciones">
+      <a class="btn btn-gold" href="${mensajeWA(p)}" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+      <a class="btn btn-outline-verde" href="index.html#propiedades">Ver otras propiedades</a>
+    </div>
+
+    <div class="ficha-compartir">
+      <span class="lbl">Compartir esta ficha:</span>
+      <a class="btn-share" href="https://wa.me/?text=${encodeURIComponent(p.tipo + ' — ' + p.direccion + ': ')}${encodeURIComponent(location.href)}" target="_blank" rel="noopener">WhatsApp</a>
+      <button type="button" class="btn-share" onclick="copiarLink()">Copiar link</button>
+      <span id="copiado">¡Link copiado!</span>
+    </div>
+  `;
+}
+
+function mostrarError(cont, msg) {
+  cont.innerHTML = `<div class="ficha-error">
+    <h1>Propiedad no disponible</h1>
+    <p style="color:var(--gray); margin-bottom:24px;">${esc(msg)}</p>
+    <a class="btn btn-verde" href="index.html#propiedades">Ver todas las propiedades</a>
+  </div>`;
+}
+
+/* ---- Carrusel ---- */
+let _i = 0;
+function slide(dir, goTo) {
+  const slides = document.getElementById('fslides');
+  if (!slides) return;
+  const total = slides.children.length;
+  _i = (goTo !== undefined) ? goTo : (_i + dir + total) % total;
+  slides.style.transform = 'translateX(-' + (_i * 100) + '%)';
+  const num = document.getElementById('fnum');
+  if (num) num.textContent = _i + 1;
+  document.querySelectorAll('#fdots .ficha-dot').forEach((d, k) => d.classList.toggle('active', k === _i));
+}
+// Swipe táctil
+document.addEventListener('touchstart', e => { window._x0 = e.touches[0].clientX; }, { passive: true });
+document.addEventListener('touchend', e => {
+  if (window._x0 == null || !document.getElementById('fslides')) return;
+  const dx = e.changedTouches[0].clientX - window._x0;
+  if (Math.abs(dx) > 40) slide(dx < 0 ? 1 : -1);
+  window._x0 = null;
+});
+// Flechas del teclado
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowLeft') slide(-1);
+  if (e.key === 'ArrowRight') slide(1);
+});
+
+/* ---- Copiar link ---- */
+function copiarLink() {
+  navigator.clipboard.writeText(location.href).then(() => {
+    const c = document.getElementById('copiado');
+    c.classList.add('show');
+    setTimeout(() => c.classList.remove('show'), 2000);
+  });
+}
+
+cargar();
+</script>
+</body>
+</html>
