@@ -174,7 +174,10 @@ nav {
 }
 .prop-empty p { font-size: 15px; color: var(--gray); margin-bottom: 20px; }
 .prop-empty-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
+.prop-direccion a { color: inherit; text-decoration: none; }
+.prop-direccion a:hover { color: var(--gold); }
+.prop-cta-ficha { background: var(--verde); color: #fff; }
+.prop-cta-ficha:hover { background: var(--verde-lt); }
 /* SERVICIOS */
 .servicios { background: var(--beige); padding: 72px 5%; }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 36px; }
