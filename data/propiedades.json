@@ -103,6 +103,35 @@
     ]
   },
   {
+    "id": 43,
+    "tipo": "Departamento",
+    "barrio": "Barrio Sur",
+    "direccion": "Rondeau 990",
+    "ciudad": "San Miguel de Tucumán",
+    "mapa": "https://maps.app.goo.gl/bXKxUujK86J8boAv8",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 80000,
+    "moneda": "USD",
+    "superficie": 87.07,
+    "dormitorios": 2,
+    "banos": 1,
+    "piso": 1,
+    "descripcion": "Departamento en planta baja, dos dormitorios con placard, baño completo y patio interno",
+    "fotos": [
+      "img/propiedades/Rondeau 990/foto-1.jpg",
+      "img/propiedades/Rondeau 990/foto-2.jpg",
+      "img/propiedades/Rondeau 990/foto-3.jpg",
+      "img/propiedades/Rondeau 990/foto-4.jpg",
+      "img/propiedades/Rondeau 990/foto-5.jpg",
+      "img/propiedades/Rondeau 990/foto-6.jpg",
+      "img/propiedades/Rondeau 990/foto-7.jpg",
+      "img/propiedades/Rondeau 990/foto-8.jpg",
+      "img/propiedades/Rondeau 990/foto-9.jpg",
+      "img/propiedades/Rondeau 990/foto-10.jpg"
+    ]
+  },
+  {
     "id": 26,
     "tipo": "Departamento",
     "barrio": "Barrio Norte",
