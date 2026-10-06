@@ -366,7 +366,8 @@
     "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
     "fotos": [
       "img/propiedades/Colon 32/1.jpg",
-      "img/propiedades/Colon 32/2.jpg"
+      "img/propiedades/Colon 32/2.jpg",
+      "img/propiedades/Colon 32/3.jpg"
     ]
   },
 
@@ -469,25 +470,6 @@
       "img/propiedades/Las Heras-Bolívar/foto-10.jpg",
       "img/propiedades/Las Heras-Bolívar/foto-11.jpg",
       "img/propiedades/Las Heras-Bolívar/foto-12.jpg"
-    ]
-  },
-  {
-    "id": 2,
-    "tipo": "Propiedad a renovar",
-    "barrio": "Plazoleta Mitre",
-    "direccion": "Italia 1300",
-    "ciudad": "San Miguel de Tucumán",
-    "mapa": "https://maps.app.goo.gl/uT5Ww8y9ZB3eB38b7",
-    "actividad": ["Venta", "Alquiler"],
-    "estado": "activa",
-    "precio": 260000,
-    "moneda": "USD",
-    "superficie": 612,
-    "descripcion": "En construcción. Apto para consultorios o locales comerciales.",
-    "fotos": [
-      "img/propiedades/Italia-1300/foto-1.jpg",
-      "img/propiedades/Italia-1300/foto-2.jpg",
-      "img/propiedades/Italia-1300/foto-3.jpg"
     ]
   }
 ]
