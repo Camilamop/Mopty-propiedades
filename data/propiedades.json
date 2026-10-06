@@ -117,6 +117,7 @@
     "dormitorios": 2,
     "banos": 1,
     "piso": 1,
+    "aptoCredito": true,
     "descripcion": "Departamento en planta baja, dos dormitorios con placard, baño completo y patio interno",
     "fotos": [
       "img/propiedades/Rondeau 990/foto-1.jpg",
@@ -129,6 +130,31 @@
       "img/propiedades/Rondeau 990/foto-8.jpg",
       "img/propiedades/Rondeau 990/foto-9.jpg",
       "img/propiedades/Rondeau 990/foto-10.jpg"
+    ]
+  },
+  {
+    "id": 44,
+    "tipo": "Casa + Local comercial",
+    "barrio": "Barrio Norte",
+    "direccion": "Avellaneda 399",
+    "ciudad": "San Miguel de Tucumán",
+    "mapa": "https://maps.app.goo.gl/Xxgp7r1WeABMgrEV6",
+    "actividad": ["Venta"],
+    "estado": "activa",
+    "precio": 295000,
+    "moneda": "USD",
+    "superficie": 220.48,
+    "aptoCredito": true,
+    "descripcion": "Vivienda y local comercial en esquina sobre la Av. Avellaneda y San Juan, ubicación estratégica. APTO CRÉDITO.",
+    "fotos": [
+      "img/propiedades/Avellaneda 399/foto-1.jpg",
+      "img/propiedades/Avellaneda 399/foto-2.jpg",
+      "img/propiedades/Avellaneda 399/foto-3.jpg",
+      "img/propiedades/Avellaneda 399/foto-4.jpg",
+      "img/propiedades/Avellaneda 399/foto-5.jpg",
+      "img/propiedades/Avellaneda 399/foto-6.jpg",
+      "img/propiedades/Avellaneda 399foto-7.jpg",
+      "img/propiedades/Avellaneda 399/foto-8.jpg"
     ]
   },
   {
