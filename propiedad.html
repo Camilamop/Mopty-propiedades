@@ -31,7 +31,7 @@
   .ficha-slides { display: flex; transition: transform 0.35s ease; }
   .ficha-slides img {
     min-width: 100%;
-    height: min(68vh, 620px);
+    aspect-ratio: 3 / 2;
     object-fit: contain;      /* muestra completas horizontales y verticales */
     background: var(--beige);
     flex-shrink: 0;
@@ -92,7 +92,6 @@
   .ficha-error h1 { font-family: 'Playfair Display', serif; color: var(--verde); font-weight: 400; margin-bottom: 12px; }
 
   @media (max-width: 640px) {
-    .ficha-slides img { height: 52vh; }
     .ficha-carac { grid-template-columns: repeat(2, 1fr); }
   }
   </style>
