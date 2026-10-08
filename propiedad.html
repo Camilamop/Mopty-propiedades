@@ -27,14 +27,27 @@
   .ficha-volver:hover { color: var(--gold); }
 
   /* Carrusel grande */
-  .ficha-galeria { position: relative; background: var(--beige); border-radius: 8px; overflow: hidden; }
-  .ficha-slides { display: flex; transition: transform 0.35s ease; }
-  .ficha-slides img {
+  .ficha-galeria {
+    position: relative; background: var(--beige); border-radius: 8px; overflow: hidden;
+    aspect-ratio: 3 / 2;       /* el marco define la proporción, en mobile y desktop */
+    max-width: 760px;          /* tope de tamaño para que no quede inmensa */
+    margin: 0 auto;            /* centrada */
+  }
+    .ficha-slide {
     min-width: 100%;
-    aspect-ratio: 3 / 2;
-    object-fit: contain;      /* muestra completas horizontales y verticales */
-    background: var(--beige);
+    height: 100%;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--beige);
+  }
+  .ficha-slides img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+    display: block;
     cursor: zoom-in;
   }
   .ficha-slide-btn {
@@ -211,7 +224,7 @@ async function cargar() {
   const galeria = fotos.length ? `
     <div class="ficha-galeria">
       <div class="ficha-slides" id="fslides">
-        ${fotos.map((f, i) => `<img src="${esc(f)}" alt="${esc(p.tipo)} en ${esc(p.direccion)} — foto ${i + 1}" ${i > 0 ? 'loading="lazy"' : ''} onclick="window.open('${esc(f)}','_blank')">`).join('')}
+                ${fotos.map((f, i) => `<div class="ficha-slide"><img src="${esc(f)}" alt="${esc(p.tipo)} en ${esc(p.direccion)} — foto ${i + 1}" ${i > 0 ? 'loading="lazy"' : ''} onclick="window.open('${esc(f)}','_blank')"></div>`).join('')}
       </div>
       ${fotos.length > 1 ? `
         <button type="button" class="ficha-slide-btn prev" aria-label="Foto anterior" onclick="slide(-1)">&#8249;</button>
