@@ -117,7 +117,7 @@
     "superficie": 87.07,
     "dormitorios": 2,
     "banos": 1,
-    "piso": PB,
+    "piso": "PB",
     "aptoCredito": true,
     "descripcion": "Departamento en planta baja, dos dormitorios con placard, baño completo y patio interno",
     "fotos": [
@@ -205,7 +205,7 @@
     "superficie": 46,
     "dormitorios": 2,
     "banos": 1,
-    "piso": PB,
+    "piso": "PB",
     "aptoCredito": true,
     "descripcion": "Departamento en planta baja en edificio pequeño, 2 dormitorios, 1 baño completo. Lavadero con patio.APTO CRÉDITO.",
     "fotos": [
