@@ -293,6 +293,7 @@ function chips(p) {
   if (p.cochera) c.push('Cochera');
   if (p.superficie) c.push(p.superficie + ' m²');
   if (p.superficieRango) c.push(p.superficieRango);
+  if (p.piso) c.push(p.piso === 'PB' ? 'Planta baja' : 'Piso ' + p.piso);
   if (p.piso) c.push('Piso ' + p.piso);
   if (p.ascensor === true) c.push('Con ascensor');
   if (p.ascensor === false) c.push('Sin ascensor');

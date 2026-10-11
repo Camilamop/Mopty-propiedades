@@ -185,6 +185,7 @@ function caracteristicas(p) {
   if (p.banos != null) items.push(['Baños', p.banos]);
   if (p.superficie) items.push(['Superficie', p.superficie + ' m²']);
   else if (p.superficieRango) items.push(['Superficie', p.superficieRango]);
+  if (p.piso != null) items.push(['Piso', p.piso === 'PB' ? 'Planta baja' : p.piso]);
   if (p.piso != null) items.push(['Piso', p.piso]);
   if (p.ascensor === true) items.push(['Ascensor', 'Sí']);
   if (p.ascensor === false) items.push(['Ascensor', 'No']);

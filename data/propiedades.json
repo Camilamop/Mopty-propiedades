@@ -55,7 +55,8 @@
       "img/propiedades/Monteagudo 666/foto-6.jpg",
       "img/propiedades/Monteagudo 666/foto-7.jpg",
       "img/propiedades/Monteagudo 666/foto-8.jpg",
-      "img/propiedades/Monteagudo 666/foto-9.jpg"
+      "img/propiedades/Monteagudo 666/foto-9.jpg",
+      "img/propiedades/Monteagudo 666/foto-10.jpg"
     ]
   },
   {
@@ -116,7 +117,7 @@
     "superficie": 87.07,
     "dormitorios": 2,
     "banos": 1,
-    "piso": 1,
+    "piso": PB,
     "aptoCredito": true,
     "descripcion": "Departamento en planta baja, dos dormitorios con placard, baño completo y patio interno",
     "fotos": [
@@ -153,7 +154,7 @@
       "img/propiedades/Avellaneda 399/foto-4.jpg",
       "img/propiedades/Avellaneda 399/foto-5.jpg",
       "img/propiedades/Avellaneda 399/foto-6.jpg",
-      "img/propiedades/Avellaneda 399foto-7.jpg",
+      "img/propiedades/Avellaneda 399/foto-7.jpg",
       "img/propiedades/Avellaneda 399/foto-8.jpg"
     ]
   },
@@ -204,6 +205,7 @@
     "superficie": 46,
     "dormitorios": 2,
     "banos": 1,
+    "piso": PB,
     "aptoCredito": true,
     "descripcion": "Departamento en planta baja en edificio pequeño, 2 dormitorios, 1 baño completo. Lavadero con patio.APTO CRÉDITO.",
     "fotos": [
@@ -262,7 +264,7 @@
     "precio": 15000,
     "moneda": "USD",
     "superficie": 1500,
-    "descripcion": "Terreno de 1,5 hectáreas en Tafí del Valle. Hermosas vistas.",
+    "descripcion": "Terreno de 1.500 m2 en Tafí del Valle. Hermosas vistas.",
     "fotos": [
       "img/propiedades/Lote en El Pelao/1.jpg",
       "img/propiedades/Lote en El Pelao/2.jpg",
@@ -344,9 +346,11 @@
     "moneda": "USD",
     "precioDetalle": "USD 50.000",
     "superficie": 141,
-    "descripcion": "Propiedad a renovar de 8x16 m² en la misma manzana de la Escuela Normal de Monteros.",
+    "descripcion": "Propiedad a renovar de 8,35 x 16,37 m en la misma manzana de la Escuela Normal de Monteros.",
     "fotos": [
-      "img/propiedades/Congreso-24/1.jpg"
+      "img/propiedades/Congreso-24/1.jpg",
+      "img/propiedades/Congreso-24/2.jpg",
+      "img/propiedades/Congreso-24/3.jpg"
     ]
   },
 
@@ -362,12 +366,11 @@
     "precio": 270000,
     "moneda": "USD",
     "precioDetalle": "USD 270.000",
-    "superficie": 627,
+    "superficie": 627.9,
     "descripcion": "Terreno de importante valor comercial. Ubicación estratégica en el centro de Monteros.",
     "fotos": [
       "img/propiedades/Colon 32/1.jpg",
-      "img/propiedades/Colon 32/2.jpg",
-      "img/propiedades/Colon 32/3.jpg"
+      "img/propiedades/Colon 32/2.jpg"
     ]
   },
 
@@ -418,7 +421,7 @@
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/io3iAuPfU1iCWEQc8",
     "actividad": ["Venta"],
-    "estado": "activa",
+    "estado": "oculta",
     "precio": 63000,
     "moneda": "USD",
     "superficie": 59,
@@ -436,7 +439,8 @@
       "img/propiedades/Virgen-Merced-200/9.jpg",
       "img/propiedades/Virgen-Merced-200/10.jpg",
       "img/propiedades/Virgen-Merced-200/11.jpg",
-      "img/propiedades/Virgen-Merced-200/12.jpg"
+      "img/propiedades/Virgen-Merced-200/12.jpg",
+      "img/propiedades/Virgen-Merced-200/13.jpg"
     ]
   },
   {
