@@ -67,7 +67,7 @@
     "ciudad": "San Miguel de Tucumán",
     "mapa": "https://maps.app.goo.gl/exotxPq1nCZjg6re6",
     "actividad": ["Alquiler"],
-    "estado": "activa",
+    "estado": "alquilada",
     "precio": 1300000,
     "moneda": "ARS",
     "superficie": 45,
